@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="45.39mm"
+   height="133.579mm"
+   viewBox="4010 2874.6 178.7 525.9"
+   version="1.1"
+   id="svg101"
+   sodipodi:docname="ADSR.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs105" />
+  <sodipodi:namedview
+     id="namedview103"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5350624"
+     inkscape:cx="87.618588"
+     inkscape:cy="253.73561"
+     inkscape:window-width="1920"
+     inkscape:window-height="953"
+     inkscape:window-x="1920"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg101" />
+  <title
+     id="title9" />
+  <style
+     type="text/css"
+     id="style11">
+*[layerid=&quot;1&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;2&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;3&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;4&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;5&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;6&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;7&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;8&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;9&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;10&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;11&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;12&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;13&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;14&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;15&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;19&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;21&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;22&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;23&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;24&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;25&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;26&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;27&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;28&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;29&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;30&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;31&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;32&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;33&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;34&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;35&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;36&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;37&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;38&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;39&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;40&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;41&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;42&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;43&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;44&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;45&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;46&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;47&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;48&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;49&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;50&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;51&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;52&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;99&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;100&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;101&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;Hole&quot;] {stroke:#000000;fill:#000000;}
+*[layerid=&quot;DRCError&quot;] {stroke:#000000;fill:#000000;}
+*[fill=&quot;none&quot;] {fill: none;}
+*[stroke=&quot;none&quot;] {stroke: none;}
+path, polyline, polygon, line {stroke-linecap:round;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;1&quot;] ellipse:not([c_etype=&quot;pad_outer&quot;]) {fill:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;1&quot;] polygon:not([c_etype=&quot;pad_outer&quot;]) {fill:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;1&quot;] polyline:not([c_etype=&quot;pad_outer&quot;]) {stroke:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;2&quot;] ellipse:not([c_etype=&quot;pad_outer&quot;]) {fill:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;2&quot;] polygon:not([c_etype=&quot;pad_outer&quot;]) {fill:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;2&quot;] polyline:not([c_etype=&quot;pad_outer&quot;]) {stroke:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;] ellipse:not([c_etype=&quot;pad_outer&quot;]) {fill:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;] polygon:not([c_etype=&quot;pad_outer&quot;]) {fill:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;] polyline:not([c_etype=&quot;pad_outer&quot;]) {stroke:#000000;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;] circle {fill:#FFFFFF;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;] &gt; polyline:nth-of-type(2) {stroke:#FFFFFF;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;][c_shape=&quot;ELLIPSE&quot;]  polyline:nth-last-of-type(1) {stroke:#FFFFFF;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;][c_shape=&quot;RECT&quot;]  polyline:nth-last-of-type(1) {stroke:#FFFFFF;}
+g[c_partid=&quot;part_pad&quot;][layerid=&quot;11&quot;][c_shape=&quot;POLYGON&quot;]  polyline:nth-last-of-type(1) {stroke:#FFFFFF;}
+g[c_partid=&quot;part_via&quot;] &gt; * + circle, #gCurParts g[c_partid=&quot;part_via&quot;] &gt; * + circle {fill:#FFFFFF;}
+g[c_partid=&quot;part_pad&quot;] &gt; polygon[c_etype=&quot;pad_outer&quot;], #gCurParts g[c_partid=&quot;part_pad&quot;] &gt; polygon[c_etype=&quot;pad_outer&quot;] {stroke-linejoin: miter;stroke-miterlimit: 100;}
+g[c_partid=&quot;part_hole&quot;] &gt; circle {fill: #FFFFFF;}path, polyline, polygon {stroke-linejoin:round;}
+rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges;}
+</style>
+  <rect
+     x="4010.3503"
+     y="2875.3342"
+     width="184.93646"
+     height="515.54608"
+     fill="#ffffff"
+     stroke="none"
+     id="rect13"
+     style="fill:#014ff8;fill-opacity:1;stroke-width:1.00723" />
+  <g
+     c_partid="part_hole"
+     c_etype="pinpart"
+     c_shapetype="group"
+     c_origin="4050.709,3112.024"
+     layerid="11"
+     id="gge42"
+     locked="0" />
+  <g
+     c_partid="part_hole"
+     c_etype="pinpart"
+     c_shapetype="group"
+     c_origin="4146.772,3112.024"
+     layerid="11"
+     id="gge114"
+     locked="0" />
+  <g
+     c_partid="part_pcbtext"
+     c_etype="pinpart"
+     c_origin="4063.414,2914.122"
+     c_rotation="0"
+     c_mirror="0"
+     id="gge1356"
+     locked="0"
+     layerid="3"
+     c_shapetype="group" />
+  <g
+     c_partid="part_pcbtext"
+     c_etype="pinpart"
+     c_origin="4092.867,3200.539"
+     c_rotation="0"
+     c_mirror="0"
+     id="gge1423"
+     locked="0"
+     layerid="3"
+     c_shapetype="group" />
+  <g
+     c_partid="part_pcbtext"
+     c_etype="pinpart"
+     c_origin="4025.906,3353.098"
+     c_rotation="0"
+     c_mirror="0"
+     id="gge1459"
+     locked="0"
+     layerid="3"
+     c_shapetype="group" />
+  <polyline
+     points="4020 2884.5945 4178.6614 2884.5945 4178.6614 3390.5 4020 3390.5 4020 2884.5945"
+     stroke-width="1"
+     stroke-linecap="round"
+     fill="none"
+     layerid="10"
+     net=""
+     id="gge819"
+     locked="0"
+     transform="matrix(1.1666118,0,0,1.0183049,-679.58891,-62.062417)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="EasyEDA Placements"
+     style="display:none">
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4049.528,2896.406"
+       layerid="11"
+       id="gge16"
+       locked="1"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4049.5281"
+         cy="2896.406"
+         r="6.2992001"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle15" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4149.134,2896.406"
+       layerid="11"
+       id="gge1371"
+       locked="1"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4149.1338"
+         cy="2896.406"
+         r="6.2992001"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle60" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4050.709,2944.043"
+       layerid="11"
+       id="gge32"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4050.709"
+         cy="2944.043"
+         r="12.0079"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle21" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4146.772,2944.043"
+       layerid="11"
+       id="gge116"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4146.772"
+         cy="2944.043"
+         r="17.716499"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle42" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4050.709,3028.032"
+       layerid="11"
+       id="gge37"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4050.709"
+         cy="3028.032"
+         r="12.0079"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle24" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4146.772,3028.032"
+       layerid="11"
+       id="gge115"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4146.772"
+         cy="3028.032"
+         r="17.716499"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle39" />
+    </g>
+    <circle
+       cx="4146.772"
+       cy="3112.0239"
+       r="17.716499"
+       stroke-width="1"
+       fill-opacity="0"
+       id="circle36"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)" />
+    <circle
+       cx="4050.709"
+       cy="3112.0239"
+       r="12.0079"
+       stroke-width="1"
+       fill-opacity="0"
+       id="circle27"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)" />
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4146.772,3196.012"
+       layerid="11"
+       id="gge113"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4146.772"
+         cy="3196.012"
+         r="17.716499"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle33" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4050.709,3196.012"
+       layerid="11"
+       id="gge47"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4050.709"
+         cy="3196.012"
+         r="12.0079"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle30" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4086.142,3264.516"
+       layerid="11"
+       id="gge1344"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4086.1421"
+         cy="3264.5161"
+         r="6.1023998"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle57" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4050.709,3264.516"
+       layerid="11"
+       id="gge1284"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4050.709"
+         cy="3264.5161"
+         r="9.7637997"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle45" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4047.5,3328"
+       layerid="11"
+       id="gge1299"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4047.5"
+         cy="3328"
+         r="12.0079"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle48" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4100,3328"
+       layerid="11"
+       id="gge1314"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4100"
+         cy="3328"
+         r="12.0079"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle51" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4152.5,3328"
+       layerid="11"
+       id="gge1329"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4152.5"
+         cy="3328"
+         r="12.0079"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle54" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4149.134,3378.689"
+       layerid="11"
+       id="gge1386"
+       locked="1"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4149.1338"
+         cy="3378.689"
+         r="6.2992001"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle63" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4049.528,3378.689"
+       layerid="11"
+       id="gge21"
+       locked="1"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4049.5281"
+         cy="3378.689"
+         r="6.2992001"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle18" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4146.772,3028.032"
+       layerid="11"
+       id="g976"
+       locked="0"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)">
+      <circle
+         cx="4146.772"
+         cy="3028.032"
+         r="17.716499"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle974" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4050.709,3028.032"
+       layerid="11"
+       id="gge37-3"
+       locked="0"
+       transform="translate(-0.23942628,84.399213)"
+       style="display:inline;fill:#000000;stroke:#000000">
+      <circle
+         cx="4052.7922"
+         cy="3028.032"
+         r="12.0079"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle24-8" />
+    </g>
+    <g
+       c_partid="part_hole"
+       c_etype="pinpart"
+       c_shapetype="group"
+       c_origin="4146.772,3028.032"
+       layerid="11"
+       id="g976-7"
+       locked="0"
+       transform="translate(0.29494716,82.479844)"
+       style="display:inline;fill:#000000;stroke:#000000">
+      <circle
+         cx="4146.772"
+         cy="3028.032"
+         r="17.716499"
+         stroke-width="1"
+         fill-opacity="0"
+         id="circle974-9" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="components"
+     style="display:none">
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="ATTACK_INPUT"
+       cx="4050.7854"
+       cy="2944.0056"
+       r="12.007839"
+       inkscape:label="ATTACK" />
+    <circle
+       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="ATTACK"
+       cx="4146.9204"
+       cy="2943.8069"
+       r="12.007839"
+       inkscape:label="ATTACK" />
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="DECAY"
+       cx="4050.7854"
+       cy="3028.116"
+       r="12.007839"
+       inkscape:label="DECAY" />
+    <circle
+       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="DECAY_PARAM"
+       cx="4146.9204"
+       cy="3027.7185"
+       r="12.007839"
+       inkscape:label="DECAY" />
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="SUSTAIN"
+       cx="4052.5642"
+       cy="3112.2559"
+       r="12.007839"
+       inkscape:label="SUSTAIN" />
+    <circle
+       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="SUSTAIN_PARAM"
+       cx="4147.3716"
+       cy="3110.196"
+       r="12.007839"
+       inkscape:label="SUSTAIN" />
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="RELEASE"
+       cx="4050.7854"
+       cy="3196.0273"
+       r="12.007839"
+       inkscape:label="RELEASE" />
+    <circle
+       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="RELEASE_PARAM"
+       cx="4147.231"
+       cy="3195.717"
+       r="12.007839"
+       inkscape:label="RELEASE" />
+    <circle
+       style="fill:#ffff00;fill-opacity:1;stroke-width:1.04166"
+       id="LENGTH"
+       cx="4050.7996"
+       cy="3264.3599"
+       r="8.6613922"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       inkscape:label="LENGTH" />
+    <circle
+       style="fill:#ff00ff;fill-opacity:1;stroke-width:1.04166"
+       id="ENV_LIGHT"
+       cx="4086.0857"
+       cy="3264.5293"
+       r="5.9054947"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       inkscape:label="ENV" />
+    <circle
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="RETRIG"
+       cx="4047.4915"
+       cy="3327.8918"
+       r="12.007839"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       inkscape:label="RETRIG" />
+    <circle
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="GATE"
+       cx="4099.9116"
+       cy="3327.8921"
+       r="12.007839"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       inkscape:label="GATE" />
+    <circle
+       style="display:inline;fill:#0000ff;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
+       id="ENV_OUTPUT"
+       cx="4152.502"
+       cy="3328.231"
+       r="12.007839"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       inkscape:label="ENV" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Text"
+     style="display:inline">
+    <path
+       c_fontsize="23.622"
+       c_fontfamily="ExcludedItalic"
+       c_text="ADSR"
+       d="m 4069.5573,2901.13 h 9.66 q 0.99,0 1.57,0.76 0.58,0.75 0.39,1.84 v 0 l -1.82,10.39 h -4.04 l 0.76,-4.32 h -6.45 l -0.76,4.32 h -4.01 l 1.82,-10.39 q 0.19,-1.09 1.04,-1.84 0.85,-0.76 1.84,-0.76 z m 0.68,5.2 h 6.45 l 0.31,-1.73 h -6.45 z m 14.48,-5.2 h 12.07 q 1,0 1.58,0.76 0.57,0.75 0.39,1.84 v 0 l -1.37,7.79 q -0.19,1.09 -1.04,1.85 -0.85,0.75 -1.85,0.75 v 0 h -12.07 z m 2.34,9.52 h 6.45 l 1.06,-6.05 h -6.44 z m 28.21,-1.3 0.61,-3.45 z m 0.85,-4.75 h -10.49 l -0.24,1.3 h 10.49 l -0.99,5.62 q 0,0.03 -0.01,0.06 -0.01,0.04 -0.01,0.06 v 0 q -0.24,1.04 -1.08,1.76 -0.84,0.72 -1.78,0.72 v 0 h -12.07 l 0.61,-3.47 h 10.47 l 0.23,-1.3 h -10.49 l 1,-5.62 q 0,-0.03 0.01,-0.06 0.01,-0.04 0.01,-0.06 v 0 q 0.24,-1.04 1.07,-1.76 0.84,-0.72 1.79,-0.72 v 0 h 12.09 z m 3.61,-3.47 h 12.07 q 0.99,0 1.57,0.76 0.58,0.75 0.39,1.84 v 0 l -0.61,3.47 q -0.19,1.09 -1.03,1.84 -0.84,0.76 -1.83,0.76 v 0 h -0.97 l 2.62,4.32 h -4.2 l -2.62,-4.32 h -2.88 l -0.78,4.32 h -4.02 z m 3.1,5.2 h 6.45 l 0.3,-1.73 h -6.45 z"
+       stroke="none"
+       stroke-width="0.8"
+       id="path66"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1" />
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4092.914,2946.602"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1396"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="15.748"
+         c_fontfamily="ExcludedItalic"
+         c_text="A"
+         d="m 4097.0115,2937.9359 h 6.44 q 0.66,0 1.05,0.51 0.38,0.5 0.26,1.23 v 0 l -1.22,6.93 h -2.69 l 0.5,-2.89 h -4.3 l -0.5,2.89 h -2.68 l 1.22,-6.93 q 0.12,-0.73 0.69,-1.23 0.57,-0.51 1.23,-0.51 z m 0.45,3.47 h 4.3 l 0.21,-1.15 h -4.3 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path69"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4092.864,3032.232"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1405"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="15.748"
+         c_fontfamily="ExcludedItalic"
+         c_text="D"
+         d="m 4095.3965,3023.5702 h 8.05 q 0.66,0 1.05,0.5 0.38,0.51 0.26,1.23 v 0 l -0.92,5.2 q -0.12,0.72 -0.69,1.23 -0.57,0.5 -1.23,0.5 v 0 h -8.04 z m 1.56,6.35 h 4.3 l 0.71,-4.03 h -4.3 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path72"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4092.724,3115.894"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1414"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="15.748"
+         c_fontfamily="ExcludedItalic"
+         c_text="S"
+         d="m 4103.9557,3112.7132 0.41,-2.3 z m 0.56,-3.17 h -6.99 l -0.16,0.87 h 7 l -0.66,3.75 q 0,0.01 -0.01,0.04 -0.01,0.02 -0.01,0.04 v 0 q -0.16,0.69 -0.72,1.17 -0.56,0.48 -1.19,0.48 v 0 h -8.04 l 0.41,-2.31 h 6.97 l 0.16,-0.87 h -6.99 l 0.66,-3.75 q 0,-0.01 0.01,-0.04 0.01,-0.02 0.01,-0.04 v 0 q 0.15,-0.69 0.71,-1.17 0.56,-0.48 1.19,-0.48 v 0 h 8.06 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path75"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <path
+       c_fontsize="15.748"
+       c_fontfamily="ExcludedItalic"
+       c_text="R"
+       d="m 4095.4015,3191.8771 h 8.05 q 0.66,0 1.05,0.5 0.38,0.51 0.26,1.23 v 0 l -0.41,2.32 q -0.13,0.72 -0.69,1.23 -0.56,0.5 -1.22,0.5 v 0 h -0.64 l 1.74,2.88 h -2.8 l -1.75,-2.88 h -1.92 l -0.52,2.88 h -2.68 z m 2.06,3.47 h 4.3 l 0.21,-1.15 h -4.3 z"
+       stroke="none"
+       stroke-width="0.8"
+       id="path78"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1" />
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4032.795,3246.799"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1432"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="9.8425"
+         c_fontfamily="ExcludedItalic"
+         c_text="SHORT"
+         d="m 4039.8139,3244.8084 0.25,-1.43 z m 0.35,-1.98 h -4.37 l -0.1,0.55 h 4.37 l -0.41,2.34 q 0,0.01 0,0.02 -0.01,0.02 -0.01,0.03 v 0 q -0.1,0.43 -0.45,0.73 -0.35,0.3 -0.74,0.3 v 0 h -5.03 l 0.26,-1.45 h 4.36 l 0.09,-0.54 h -4.37 l 0.42,-2.34 q 0,-0.01 0,-0.02 0.01,-0.02 0.01,-0.03 v 0 q 0.1,-0.43 0.45,-0.73 0.35,-0.3 0.74,-0.3 v 0 h 5.04 z m 5.87,-1.44 h 1.68 l -0.95,5.41 h -1.69 l 0.36,-1.99 h -2.69 l -0.35,1.99 h -1.68 l 0.96,-5.41 h 1.67 l -0.34,1.99 h 2.67 z m 3.91,3.96 h 2.68 l 0.45,-2.52 h -2.69 z m 0.03,-3.96 h 4.02 q 0.41,0 0.66,0.31 0.24,0.32 0.16,0.77 v 0 l -0.57,3.25 q -0.08,0.45 -0.44,0.77 -0.35,0.31 -0.76,0.31 v 0 h -4.03 q -0.41,0 -0.65,-0.31 -0.24,-0.32 -0.17,-0.77 v 0 l 0.57,-3.25 q 0.08,-0.45 0.44,-0.77 0.35,-0.31 0.77,-0.31 z m 6.28,0 h 5.03 q 0.42,0 0.66,0.31 0.24,0.32 0.16,0.77 v 0 l -0.25,1.45 q -0.08,0.45 -0.43,0.76 -0.35,0.32 -0.77,0.32 v 0 h -0.4 l 1.09,1.8 h -1.75 l -1.09,-1.8 h -1.2 l -0.33,1.8 h -1.67 z m 1.29,2.16 h 2.69 l 0.13,-0.72 h -2.69 z m 6.07,-2.16 h 6.04 l -0.26,1.44 h -2.18 l -0.7,3.97 h -1.68 l 0.71,-3.97 h -2.19 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path81"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4035.748,3287.154"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1441"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="9.8425"
+         c_fontfamily="ExcludedItalic"
+         c_text="LONG"
+         d="m 4038.3082,3285.7065 h 4.36 l -0.25,1.45 h -5.04 q -0.41,0 -0.65,-0.32 -0.24,-0.31 -0.16,-0.77 v 0 l 0.77,-4.33 h 1.67 z m 7.29,0 h 2.69 l 0.44,-2.52 h -2.68 z m 0.03,-3.97 h 4.03 q 0.41,0 0.65,0.32 0.24,0.31 0.16,0.77 v 0 l -0.57,3.24 q -0.07,0.46 -0.43,0.77 -0.35,0.32 -0.77,0.32 v 0 h -4.02 q -0.42,0 -0.66,-0.32 -0.24,-0.31 -0.16,-0.77 v 0 l 0.57,-3.24 q 0.08,-0.46 0.43,-0.77 0.36,-0.32 0.77,-0.32 z m 10.65,0 h 1.68 l -0.76,4.33 q -0.08,0.46 -0.44,0.77 -0.35,0.32 -0.76,0.32 v 0 h -0.86 l -1.91,-3.36 -0.59,3.36 h -1.67 l 0.75,-4.33 q 0.08,-0.46 0.44,-0.77 0.35,-0.32 0.77,-0.32 v 0 h 0.85 l 1.91,3.36 z m 8.72,1.45 h -4.37 l -0.44,2.52 h 2.69 l 0.09,-0.54 h -2.18 l 0.26,-1.44 h 3.85 l -0.6,3.43 h -5.04 q -0.41,0 -0.65,-0.32 -0.24,-0.31 -0.16,-0.77 v 0 l 0.57,-3.24 q 0.08,-0.46 0.43,-0.77 0.36,-0.32 0.77,-0.32 v 0 h 5.04 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path84"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4075.118,3282.232"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1450"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="9.8425"
+         c_fontfamily="ExcludedItalic"
+         c_text="ACT."
+         d="m 4077.676,3276.8152 h 4.03 q 0.41,0 0.65,0.32 0.24,0.31 0.16,0.77 v 0 l -0.75,4.33 h -1.69 l 0.32,-1.8 h -2.69 l -0.31,1.8 h -1.68 l 0.76,-4.33 q 0.08,-0.46 0.43,-0.77 0.36,-0.32 0.77,-0.32 z m 0.29,2.17 h 2.68 l 0.13,-0.72 h -2.69 z m 11.82,-0.72 h -4.37 l -0.45,2.52 h 4.36 l -0.24,1.45 h -5.04 q -0.41,0 -0.66,-0.32 -0.24,-0.31 -0.16,-0.77 v 0 l 0.57,-3.24 q 0.08,-0.46 0.44,-0.77 0.35,-0.32 0.76,-0.32 v 0 h 5.04 z m 1.56,-1.45 h 6.05 l -0.26,1.45 h -2.19 l -0.69,3.97 h -1.69 l 0.71,-3.97 h -2.18 z m 7.22,5.42 h -1.34 l 0.25,-1.45 h 1.34 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path87"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <path
+       c_fontsize="9.8425"
+       c_fontfamily="ExcludedItalic"
+       c_text="RE-TRIG."
+       d="m 4027.4877,3347.6839 h 5.03 q 0.42,0 0.66,0.32 0.24,0.31 0.16,0.76 v 0 l -0.26,1.45 q -0.08,0.45 -0.43,0.77 -0.34,0.31 -0.76,0.31 v 0 h -0.4 l 1.09,1.8 h -1.75 l -1.09,-1.8 h -1.2 l -0.33,1.8 h -1.67 z m 1.29,2.17 h 2.69 l 0.13,-0.72 h -2.69 z m 11.79,-0.72 h -4.37 l -0.09,0.54 h 3.61 l -0.26,1.44 h -3.6 l -0.1,0.54 h 4.36 l -0.25,1.44 h -5.04 q -0.41,0 -0.65,-0.31 -0.24,-0.32 -0.16,-0.77 v 0 l 0.57,-3.25 q 0.08,-0.45 0.43,-0.76 0.36,-0.32 0.77,-0.32 v 0 h 5.04 z m 3.36,1.49 h -2.72 l 0.17,-0.96 h 2.72 z m 1.49,-2.94 h 6.04 l -0.26,1.45 h -2.18 l -0.7,3.96 h -1.68 l 0.7,-3.96 h -2.18 z m 7.23,0 h 5.03 q 0.41,0 0.65,0.32 0.24,0.31 0.17,0.76 v 0 l -0.26,1.45 q -0.08,0.45 -0.43,0.77 -0.35,0.31 -0.76,0.31 v 0 h -0.4 l 1.09,1.8 h -1.75 l -1.1,-1.8 h -1.2 l -0.32,1.8 h -1.67 z m 1.29,2.17 h 2.69 l 0.12,-0.72 h -2.68 z m 6.52,3.24 h -1.67 l 0.96,-5.41 h 1.67 z m 7.81,-3.96 h -4.37 l -0.44,2.52 h 2.68 l 0.1,-0.54 h -2.18 l 0.25,-1.44 h 3.86 l -0.6,3.42 h -5.04 q -0.41,0 -0.65,-0.31 -0.24,-0.32 -0.17,-0.77 v 0 l 0.58,-3.25 q 0.07,-0.45 0.43,-0.76 0.35,-0.32 0.77,-0.32 v 0 h 5.04 z m 1.49,3.96 h -1.34 l 0.25,-1.44 h 1.34 z"
+       stroke="none"
+       stroke-width="0.8"
+       id="path90"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1" />
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4083.976,3353.098"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1468"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="9.8425"
+         c_fontfamily="ExcludedItalic"
+         c_text="GATE"
+         d="m 4091.3492,3349.1353 h -4.37 l -0.44,2.52 h 2.68 l 0.1,-0.55 h -2.18 l 0.25,-1.43 h 3.86 l -0.6,3.42 h -5.04 q -0.41,0 -0.65,-0.31 -0.24,-0.32 -0.17,-0.77 v 0 l 0.58,-3.25 q 0.07,-0.45 0.43,-0.77 0.35,-0.31 0.77,-0.31 v 0 h 5.04 z m 2.48,-1.45 h 4.03 q 0.41,0 0.65,0.31 0.24,0.32 0.16,0.77 v 0 l -0.76,4.33 h -1.68 l 0.32,-1.8 h -2.69 l -0.32,1.8 h -1.67 l 0.76,-4.33 q 0.08,-0.45 0.43,-0.77 0.36,-0.31 0.77,-0.31 z m 0.29,2.16 h 2.68 l 0.13,-0.71 h -2.69 z m 6.09,-2.16 h 6.04 l -0.25,1.45 h -2.19 l -0.7,3.96 h -1.68 l 0.71,-3.96 h -2.19 z m 13.02,1.45 h -4.37 l -0.09,0.54 h 3.6 l -0.25,1.43 h -3.6 l -0.1,0.55 h 4.36 l -0.25,1.44 h -5.04 q -0.41,0 -0.65,-0.31 -0.24,-0.32 -0.17,-0.77 v 0 l 0.58,-3.25 q 0.07,-0.45 0.43,-0.77 0.35,-0.31 0.77,-0.31 v 0 h 5.04 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path93"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <g
+       c_partid="part_pcbtext"
+       c_etype="pinpart"
+       c_origin="4130.236,3353.098"
+       c_rotation="0"
+       c_mirror="0"
+       id="gge1477"
+       locked="0"
+       layerid="3"
+       c_shapetype="group"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         c_fontsize="9.8425"
+         c_fontfamily="ExcludedItalic"
+         c_text="OUTPUT"
+         d="m 4132.7928,3351.6467 h 2.69 l 0.44,-2.52 h -2.68 z m 0.03,-3.96 h 4.03 q 0.41,0 0.65,0.31 0.24,0.32 0.16,0.77 v 0 l -0.57,3.25 q -0.08,0.45 -0.43,0.77 -0.35,0.31 -0.77,0.31 v 0 h -4.02 q -0.42,0 -0.66,-0.31 -0.24,-0.32 -0.16,-0.77 v 0 l 0.57,-3.25 q 0.08,-0.45 0.43,-0.77 0.36,-0.31 0.77,-0.31 z m 10.61,0 h 1.68 l -0.76,4.33 q -0.08,0.45 -0.43,0.77 -0.35,0.31 -0.76,0.31 v 0 h -4.04 q -0.41,0 -0.65,-0.31 -0.24,-0.32 -0.17,-0.77 v 0 l 0.77,-4.33 h 1.67 l -0.69,3.96 h 2.68 z m 3.03,0 h 6.05 l -0.26,1.44 h -2.18 l -0.7,3.97 h -1.69 l 0.71,-3.97 h -2.18 z m 7.24,0 h 5.03 q 0.41,0 0.65,0.31 0.24,0.32 0.16,0.77 v 0 l -0.25,1.45 q -0.08,0.45 -0.43,0.77 -0.35,0.31 -0.76,0.31 v 0 h -3.36 l -0.32,1.8 h -1.68 z m 1.29,2.16 h 2.68 l 0.13,-0.72 h -2.69 z m 10.32,-2.16 h 1.68 l -0.76,4.33 q -0.08,0.45 -0.43,0.77 -0.35,0.31 -0.76,0.31 v 0 h -4.04 q -0.41,0 -0.65,-0.31 -0.24,-0.32 -0.17,-0.77 v 0 l 0.77,-4.33 h 1.67 l -0.69,3.96 h 2.68 z m 3.03,0 h 6.05 l -0.26,1.44 h -2.18 l -0.7,3.97 h -1.69 l 0.71,-3.97 h -2.18 z"
+         stroke="none"
+         stroke-width="0.8"
+         id="path96"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+    <path
+       d="m 4111.5694,3360.2865 c -0.1361,0.1639 -0.2475,0.4206 -0.2475,0.5704 0,0.1499 -0.051,0.2731 -0.1122,0.2738 -0.1343,0 -0.4862,0.7907 -0.4862,1.0906 v 0.2121 h -0.1496 -0.1496 v 0.3259 0.326 h -0.1495 -0.1496 v 0.326 0.3259 h -0.1496 -0.1497 v 0.2397 c 0,0.1317 -0.1448,0.5168 -0.3218,0.8556 -0.177,0.339 -0.5768,1.1558 -0.8885,1.8151 -0.3117,0.6593 -0.6736,1.3274 -0.8042,1.4848 l -0.2375,0.2859 0.041,2.4271 0.042,2.4272 2.5076,0.045 2.5076,0.045 -0.1,0.4442 c -0.055,0.2443 -0.1568,0.4687 -0.2263,0.4986 -0.07,0.03 -0.1265,0.195 -0.1265,0.3667 v 0.3125 h -0.1496 -0.1495 v 0.2291 c 0,0.2715 -0.6238,1.6215 -0.7854,1.6997 -0.062,0.03 -0.1122,0.1481 -0.1122,0.2627 0,0.1146 -0.2693,0.7788 -0.5984,1.476 -0.3291,0.697 -0.5984,1.3673 -0.5984,1.4894 0,0.1221 -0.051,0.222 -0.1142,0.222 -0.063,0 -0.2351,0.275 -0.3827,0.6113 -0.1477,0.3361 -0.4321,0.9412 -0.6322,1.3446 -0.3739,0.7543 -0.4337,1.0871 -0.2759,1.5352 l 0.091,0.2578 h 0.2533 c 0.1392,0 0.3171,0.063 0.3953,0.1405 0.2048,0.2024 2.1657,1.3265 2.314,1.3265 0.1335,0 0.5955,-0.9214 0.5955,-1.1877 0,-0.088 0.1178,-0.279 0.2618,-0.4249 0.3371,-0.3417 0.6358,-0.9231 0.6358,-1.2376 v -0.2467 h 0.1496 0.1495 v -0.3261 -0.3259 h 0.1497 0.1496 v -0.3261 -0.3259 h 0.1386 c 0.1597,0 0.6093,-0.9208 0.6093,-1.2475 v -0.2195 h 0.1496 0.1496 v -0.326 -0.326 h 0.1496 0.1495 v -0.326 -0.326 h 0.1497 0.1496 v -0.3813 -0.3813 l 0.7441,-1.5928 0.7443,-1.5926 0.3162,-0.2989 0.3162,-0.2987 0.038,-1.5984 c 0.021,-0.8791 0.01,-1.9468 -0.028,-2.3725 l -0.066,-0.7743 h -2.3484 -2.3485 l -0.1573,-0.1714 -0.1573,-0.1713 0.07,-0.3992 0.07,-0.3991 h 0.1321 0.1322 v -0.326 -0.3259 h 0.1496 0.1496 l 0.014,-0.2853 c 0.01,-0.1569 0.2089,-0.652 0.4475,-1.1003 0.2388,-0.4482 0.4762,-0.9433 0.5276,-1.1002 0.051,-0.1568 0.1528,-0.2852 0.2254,-0.2852 h 0.1322 v -0.228 c 0,-0.1254 0.2019,-0.6462 0.4488,-1.1575 l 0.4488,-0.9296 v -0.391 -0.3909 h -0.2993 -0.2991 v -0.1222 c 0,-0.1477 -0.7267,-0.5298 -1.0056,-0.5298 h -0.1993 l -0.086,-0.2445 -0.086,-0.2444 h -0.2742 c -0.1509,0 -0.316,-0.073 -0.3669,-0.1631 l -0.092,-0.163 h -0.342 -0.3419 l -0.2477,0.2982 m -28.7071,2.4222 -0.2618,0.075 v 7.384 7.384 l 0.4674,0.1019 0.4675,0.1019 h 4.2073 4.2072 l 0.3419,-0.1 0.342,-0.1 -0.043,-1.4871 -0.043,-1.4872 -3.3118,-0.044 -3.3117,-0.044 -0.089,-0.3638 -0.089,-0.3635 v -5.4838 -5.4837 l -0.2366,-0.099 c -0.2662,-0.1113 -2.2401,-0.1013 -2.6429,0.013 m -14.5586,0.2672 c -0.042,0.1192 -0.057,0.871 -0.033,1.6707 l 0.044,1.4541 3.637,0.044 3.637,0.044 0.3645,0.3972 0.3645,0.3972 v 0.3408 0.3408 l -0.3645,0.397 -0.3645,0.3972 -3.637,0.044 -3.637,0.044 v 1.8744 1.8745 l 3.6581,0.044 3.6583,0.044 0.3434,0.3515 0.3432,0.3514 v 0.3294 0.3295 l -0.4019,0.4571 -0.402,0.4572 h -3.6426 -3.6426 l 0.043,1.5077 0.043,1.5077 4.5563,0.043 4.5563,0.043 0.455,-0.2363 c 0.7286,-0.3783 1.7264,-1.7036 1.7264,-2.2929 v -0.2467 h 0.1496 0.1497 v -0.326 -0.326 h 0.1495 0.1496 v -1.2224 -1.2226 h -0.1496 -0.1495 v -0.3259 -0.3261 h -0.1497 -0.1496 v -0.2467 c 0,-0.1357 -0.084,-0.4019 -0.1869,-0.5918 l -0.1871,-0.3451 0.1871,-0.074 c 0.1028,-0.041 0.1869,-0.163 0.1869,-0.2721 0,-0.2892 0.355,-1.0757 0.4862,-1.0772 h 0.1122 v -1.1185 -1.1184 l -0.5942,-1.2588 -0.5942,-1.2586 -0.4108,-0.3531 c -0.2259,-0.1941 -0.572,-0.4447 -0.7692,-0.5568 l -0.3584,-0.2037 h -4.5502 -4.5501 l -0.076,0.2166 m 26.451,0.054 -0.1869,0.082 v 5.5188 5.5187 l 0.1495,0.1007 0.1496,0.1008 v 0.3163 0.3164 h 0.1496 0.1495 v 0.2434 0.2435 l 0.8847,0.9789 0.8847,0.9791 h 0.2373 0.2373 v 0.1631 0.163 h 0.2903 0.2904 l 0.092,0.1629 0.092,0.163 h 2.0018 2.0018 l 0.092,-0.163 0.092,-0.1629 h 0.2904 0.2903 v -0.163 -0.1631 h 0.2462 0.2461 l 0.8758,-1.0029 0.8758,-1.0028 v -0.2196 -0.2196 h 0.1495 0.1496 v -0.326 -0.326 h 0.1497 0.1496 v -5.6204 -5.6202 l -0.3398,-0.093 c -0.1868,-0.051 -0.8095,-0.071 -1.3837,-0.044 l -1.044,0.049 -0.039,5.1582 -0.039,5.1583 -0.614,0.6689 -0.6138,0.6689 h -1.5351 -1.535 l -0.6164,-0.6518 -0.6164,-0.6518 v -5.1172 -5.1171 l -0.2366,-0.099 c -0.2793,-0.1168 -2.1485,-0.1098 -2.4187,0.01 m 24.8306,0.01 -0.338,0.071 0.039,7.4456 0.039,7.4456 h 1.4959 1.4959 l 0.075,-2.7172 0.075,-2.7172 0.1241,-0.1353 0.1242,-0.1353 1.9627,-0.054 1.9627,-0.054 0.6397,0.1046 0.6396,0.1044 0.041,2.8024 0.041,2.8023 h 1.5706 1.5708 l 0.039,-7.4364 0.039,-7.4365 -0.469,-0.1022 c -0.258,-0.056 -0.8264,-0.1022 -1.2633,-0.1022 h -0.7942 l -0.3801,0.1575 -0.3801,0.1574 -0.041,2.7357 -0.041,2.7358 -2.5423,0.045 -2.5423,0.045 -0.1877,-0.2798 -0.1878,-0.2797 v -2.5578 -2.5577 l -0.3366,-0.098 c -0.3692,-0.1079 -1.9334,-0.1 -2.4697,0.013 m 0.2888,16.8893 -0.4743,0.5331 v 0.3101 0.31 l 0.1795,-0.1955 0.1795,-0.1956 h 0.6433 0.6433 v 0.1629 c 0,0.09 0.067,0.163 0.1495,0.163 h 0.1496 v -0.2852 -0.2852 l -0.4964,-0.5254 -0.4965,-0.5255 -0.4743,0.5333 m 2.3679,0.04 v 0.582 l 0.2137,0.2329 0.2137,0.2328 h 0.6299 0.6301 l 0.1987,-0.2852 0.1986,-0.2852 v -0.4386 -0.4387 l -0.1404,-0.095 -0.1404,-0.094 -0.047,0.6147 -0.047,0.6145 -0.7105,0.05 -0.7106,0.05 v -0.6608 -0.661 h -0.1496 -0.1496 v 0.5822 m 2.942,-0.4735 c -0.055,0.06 -0.1,0.4265 -0.1,0.815 v 0.7062 h 0.8335 0.8334 l 0.2138,-0.2328 0.2137,-0.2329 v -0.3492 -0.3493 l -0.2137,-0.2328 -0.2138,-0.2329 h -0.7337 c -0.4035,0 -0.7786,0.049 -0.8334,0.1087 m 2.8921,0.7063 v 0.8342 l 0.1496,-0.1007 0.1496,-0.1008 v -0.6327 -0.6328 l -0.1496,-0.1007 -0.1496,-0.1008 v 0.8343 m 1.2341,-0.5712 -0.187,0.2315 v 0.3445 0.3444 l 0.2137,0.2329 0.2137,0.2328 h 0.6197 0.6198 l 0.2137,-0.2328 0.2136,-0.2329 v -0.3492 -0.3493 l -0.2136,-0.2328 -0.2137,-0.2329 -0.6465,0.01 -0.6464,0.01 -0.187,0.2313 m -8.5641,0.6411 c 0,0.051 -0.1683,0.093 -0.374,0.093 h -0.374 v -0.1304 c 0,-0.072 0.077,-0.2137 0.17,-0.3155 l 0.1699,-0.1851 0.204,0.2223 c 0.1123,0.1223 0.2041,0.2643 0.2041,0.3156 m 6.1332,-0.07 v 0.489 h -0.7479 -0.7479 v -0.3803 c 0,-0.5248 0.1034,-0.5977 0.8477,-0.5977 h 0.6481 v 0.489 m 4.039,0 v 0.489 h -0.748 -0.7479 v -0.489 -0.489 h 0.7479 0.748 v 0.489"
+       id="gge1502"
+       stroke="none"
+       layerid="3"
+       style="fill:#ffffff;fill-opacity:1"
+       transform="translate(-5.1980535e-5,-1.9111992e-5)" />
+  </g>
+</svg>

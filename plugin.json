@@ -1,0 +1,34 @@
+{
+  "slug": "BlushAudio",
+  "name": "Blush Audio",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "brand": "Blush Audio",
+  "author": "Blush Audio",
+  "authorEmail": "blushaudio@gmail.com",
+  "authorUrl": "www.blushaudio.co.uk",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "SimpleOsc",
+      "name": "Simple Oscillator",
+      "description": "A very simple oscillator",
+      "tags": [
+        "VCO"
+      ]
+    },
+    {
+      "slug": "ADSR",
+      "name": "ADSR",
+      "description": "ADSR Envelope Generator",
+      "tags": [
+        "ADSR",
+        "Envelope"
+      ]
+    }
+  ]
+}
