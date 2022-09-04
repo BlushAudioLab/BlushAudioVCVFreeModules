@@ -5,20 +5,20 @@
   "license": "GPL-3.0-or-later",
   "brand": "Blush Audio",
   "author": "Blush Audio",
-  "authorEmail": "blushaudio@gmail.com",
+  "authorEmail": "info@blushaudio.co.uk",
   "authorUrl": "www.blushaudio.co.uk",
   "pluginUrl": "",
   "manualUrl": "",
   "sourceUrl": "https://github.com/BlushAudioLab/BlushAudioVCVFreeModules",
-  "donateUrl": "",
+  "donateUrl": "https://paypal.me/blushaudio",
   "changelogUrl": "",
   "modules": [
     {
       "slug": "SimpleOsc",
       "name": "Simple Oscillator",
-      "description": "A very simple oscillator",
+      "description": "Sine Wave Oscillator",
       "tags": [
-        "VCO"
+        "Oscillator"
       ]
     },
     {
@@ -27,7 +27,7 @@
       "description": "ADSR Envelope Generator",
       "tags": [
         "ADSR",
-        "Envelope"
+        "Envelope Generator"
       ]
     }
   ]
