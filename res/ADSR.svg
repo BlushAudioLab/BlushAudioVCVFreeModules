@@ -5,7 +5,7 @@
    viewBox="4010 2874.6 178.7 525.9"
    version="1.1"
    id="svg101"
-   sodipodi:docname="ADSR.svg"
+   sodipodi:docname="SimpleOsc.svg"
    inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.5350624"
-     inkscape:cx="87.618588"
-     inkscape:cy="253.73561"
+     inkscape:zoom="1.085453"
+     inkscape:cx="139.57306"
+     inkscape:cy="281.44931"
      inkscape:window-width="1920"
-     inkscape:window-height="953"
-     inkscape:window-x="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg101" />
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3" />
   <title
      id="title9" />
   <style
@@ -112,10 +112,31 @@ g[c_partid=&quot;part_pad&quot;] &gt; polygon[c_etype=&quot;pad_outer&quot;], #g
 g[c_partid=&quot;part_hole&quot;] &gt; circle {fill: #FFFFFF;}path, polyline, polygon {stroke-linejoin:round;}
 rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges;}
 </style>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Background"
+     style="display:inline">
+    <path
+       style="fill:#ff6600;stroke-width:0.651439"
+       d="M 10.42303,252.43275 V 10.42303 H 85.664274 160.90552 V 252.43275 494.44246 H 85.664274 10.42303 Z"
+       id="path589"
+       transform="matrix(1.0416636,0,0,1.0416636,4009.9999,2874.6)" />
+    <path
+       style="fill:#ff6600;stroke-width:0.651439"
+       d="M 10.42303,252.43275 V 10.42303 H 85.664274 160.90552 V 252.43275 494.44246 H 85.664274 10.42303 Z"
+       id="path628"
+       transform="matrix(1.0416636,0,0,1.0416636,4009.9999,2874.6)" />
+    <path
+       style="fill:#ff6600;stroke-width:0.651439"
+       d="M 10.42303,252.43275 V 10.42303 H 85.664274 160.90552 V 252.43275 494.44246 H 85.664274 10.42303 Z"
+       id="path667"
+       transform="matrix(1.0416636,0,0,1.0416636,4009.9999,2874.6)" />
+  </g>
   <rect
-     x="4010.3503"
-     y="2875.3342"
-     width="184.93646"
+     x="4010.3513"
+     y="2874.9541"
+     width="184.9351"
      height="515.54608"
      fill="#ffffff"
      stroke="none"
@@ -177,11 +198,16 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
      id="gge819"
      locked="0"
      transform="matrix(1.1666118,0,0,1.0183049,-679.58891,-62.062417)" />
+  <path
+     style="fill:#ff6600;stroke:#000000;stroke-width:1.21617px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 4124.4669,3312.6692 c 15.2486,-8.3414 34.7264,0.2344 52.0896,0.3517 l 2.1663,8.3828 0.4798,36.4387 c -12.0023,0.748 -40.0946,0.413 -52.0897,-0.1098 -0.6079,-18.4941 -7.1396,-44.9391 -2.646,-45.0634 z"
+     id="path5461"
+     sodipodi:nodetypes="cccccc" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="EasyEDA Placements"
-     style="display:none">
+     inkscape:label="Components"
+     style="display:inline">
     <g
        c_partid="part_hole"
        c_etype="pinpart"
@@ -453,161 +479,6 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
          fill-opacity="0"
          id="circle18" />
     </g>
-    <g
-       c_partid="part_hole"
-       c_etype="pinpart"
-       c_shapetype="group"
-       c_origin="4146.772,3028.032"
-       layerid="11"
-       id="g976"
-       locked="0"
-       transform="translate(-5.1980535e-5,-1.9111992e-5)">
-      <circle
-         cx="4146.772"
-         cy="3028.032"
-         r="17.716499"
-         stroke-width="1"
-         fill-opacity="0"
-         id="circle974" />
-    </g>
-    <g
-       c_partid="part_hole"
-       c_etype="pinpart"
-       c_shapetype="group"
-       c_origin="4050.709,3028.032"
-       layerid="11"
-       id="gge37-3"
-       locked="0"
-       transform="translate(-0.23942628,84.399213)"
-       style="display:inline;fill:#000000;stroke:#000000">
-      <circle
-         cx="4052.7922"
-         cy="3028.032"
-         r="12.0079"
-         stroke-width="1"
-         fill-opacity="0"
-         id="circle24-8" />
-    </g>
-    <g
-       c_partid="part_hole"
-       c_etype="pinpart"
-       c_shapetype="group"
-       c_origin="4146.772,3028.032"
-       layerid="11"
-       id="g976-7"
-       locked="0"
-       transform="translate(0.29494716,82.479844)"
-       style="display:inline;fill:#000000;stroke:#000000">
-      <circle
-         cx="4146.772"
-         cy="3028.032"
-         r="17.716499"
-         stroke-width="1"
-         fill-opacity="0"
-         id="circle974-9" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer4"
-     inkscape:label="components"
-     style="display:none">
-    <circle
-       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="ATTACK_INPUT"
-       cx="4050.7854"
-       cy="2944.0056"
-       r="12.007839"
-       inkscape:label="ATTACK" />
-    <circle
-       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="ATTACK"
-       cx="4146.9204"
-       cy="2943.8069"
-       r="12.007839"
-       inkscape:label="ATTACK" />
-    <circle
-       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="DECAY"
-       cx="4050.7854"
-       cy="3028.116"
-       r="12.007839"
-       inkscape:label="DECAY" />
-    <circle
-       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="DECAY_PARAM"
-       cx="4146.9204"
-       cy="3027.7185"
-       r="12.007839"
-       inkscape:label="DECAY" />
-    <circle
-       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="SUSTAIN"
-       cx="4052.5642"
-       cy="3112.2559"
-       r="12.007839"
-       inkscape:label="SUSTAIN" />
-    <circle
-       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="SUSTAIN_PARAM"
-       cx="4147.3716"
-       cy="3110.196"
-       r="12.007839"
-       inkscape:label="SUSTAIN" />
-    <circle
-       style="fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="RELEASE"
-       cx="4050.7854"
-       cy="3196.0273"
-       r="12.007839"
-       inkscape:label="RELEASE" />
-    <circle
-       style="fill:#ff0000;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="RELEASE_PARAM"
-       cx="4147.231"
-       cy="3195.717"
-       r="12.007839"
-       inkscape:label="RELEASE" />
-    <circle
-       style="fill:#ffff00;fill-opacity:1;stroke-width:1.04166"
-       id="LENGTH"
-       cx="4050.7996"
-       cy="3264.3599"
-       r="8.6613922"
-       transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       inkscape:label="LENGTH" />
-    <circle
-       style="fill:#ff00ff;fill-opacity:1;stroke-width:1.04166"
-       id="ENV_LIGHT"
-       cx="4086.0857"
-       cy="3264.5293"
-       r="5.9054947"
-       transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       inkscape:label="ENV" />
-    <circle
-       style="display:inline;fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="RETRIG"
-       cx="4047.4915"
-       cy="3327.8918"
-       r="12.007839"
-       transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       inkscape:label="RETRIG" />
-    <circle
-       style="display:inline;fill:#00ff00;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="GATE"
-       cx="4099.9116"
-       cy="3327.8921"
-       r="12.007839"
-       transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       inkscape:label="GATE" />
-    <circle
-       style="display:inline;fill:#0000ff;fill-opacity:1;stroke-width:0.39779;shape-rendering:crispEdges"
-       id="ENV_OUTPUT"
-       cx="4152.502"
-       cy="3328.231"
-       r="12.007839"
-       transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       inkscape:label="ENV" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -623,7 +494,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
        stroke-width="0.8"
        id="path66"
        transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       style="fill:#ffffff;fill-opacity:1" />
+       style="fill:#ffffff" />
     <g
        c_partid="part_pcbtext"
        c_etype="pinpart"
@@ -635,7 +506,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
        layerid="3"
        c_shapetype="group"
        transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       style="fill:#ffffff;fill-opacity:1">
+       style="fill:#ffffff">
       <path
          c_fontsize="15.748"
          c_fontfamily="ExcludedItalic"
@@ -644,7 +515,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
          stroke="none"
          stroke-width="0.8"
          id="path69"
-         style="fill:#ffffff;fill-opacity:1" />
+         style="fill:#ffffff" />
     </g>
     <g
        c_partid="part_pcbtext"
@@ -657,7 +528,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
        layerid="3"
        c_shapetype="group"
        transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       style="fill:#ffffff;fill-opacity:1">
+       style="fill:#ffffff">
       <path
          c_fontsize="15.748"
          c_fontfamily="ExcludedItalic"
@@ -666,7 +537,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
          stroke="none"
          stroke-width="0.8"
          id="path72"
-         style="fill:#ffffff;fill-opacity:1" />
+         style="fill:#ffffff" />
     </g>
     <g
        c_partid="part_pcbtext"
@@ -711,7 +582,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
        layerid="3"
        c_shapetype="group"
        transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       style="fill:#ffffff;fill-opacity:1">
+       style="fill:#e1ffff;fill-opacity:1">
       <path
          c_fontsize="9.8425"
          c_fontfamily="ExcludedItalic"
@@ -720,7 +591,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
          stroke="none"
          stroke-width="0.8"
          id="path81"
-         style="fill:#ffffff;fill-opacity:1" />
+         style="fill:#e1ffff;fill-opacity:1" />
     </g>
     <g
        c_partid="part_pcbtext"
@@ -755,7 +626,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
        layerid="3"
        c_shapetype="group"
        transform="translate(-5.1980535e-5,-1.9111992e-5)"
-       style="fill:#ffffff;fill-opacity:1">
+       style="fill:#feffff;fill-opacity:1">
       <path
          c_fontsize="9.8425"
          c_fontfamily="ExcludedItalic"
@@ -764,7 +635,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
          stroke="none"
          stroke-width="0.8"
          id="path87"
-         style="fill:#ffffff;fill-opacity:1" />
+         style="fill:#feffff;fill-opacity:1" />
     </g>
     <path
        c_fontsize="9.8425"
@@ -825,7 +696,7 @@ rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges
        id="gge1502"
        stroke="none"
        layerid="3"
-       style="fill:#ffffff;fill-opacity:1"
-       transform="translate(-5.1980535e-5,-1.9111992e-5)" />
+       transform="translate(-5.1980535e-5,-1.9111992e-5)"
+       style="fill:#ffffff;fill-opacity:1" />
   </g>
 </svg>
