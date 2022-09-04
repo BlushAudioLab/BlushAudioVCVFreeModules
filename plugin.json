@@ -1,7 +1,7 @@
 {
   "slug": "BlushAudio",
   "name": "Blush Audio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "GPL-3.0-or-later",
   "brand": "Blush Audio",
   "author": "Blush Audio",
@@ -9,7 +9,7 @@
   "authorUrl": "www.blushaudio.co.uk",
   "pluginUrl": "",
   "manualUrl": "",
-  "sourceUrl": "",
+  "sourceUrl": "https://github.com/BlushAudioLab/BlushAudioVCVFreeModules",
   "donateUrl": "",
   "changelogUrl": "",
   "modules": [
