@@ -29,6 +29,14 @@
         "ADSR",
         "Envelope Generator"
       ]
+    },
+    {
+      "slug": "BuffMult",
+      "name": "Buff Mult",
+      "description": "A Mult",
+      "tags": [
+        "Multiple"
+      ]
     }
   ]
 }

@@ -11,3 +11,4 @@ extern Plugin* pluginInstance;
 // extern Model* modelMyModule;
 extern Model* modelSimpleOsc;
 extern Model* modelADSR;
+extern Model* modelBuffMult;
