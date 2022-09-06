@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2965455"
-     inkscape:cx="128.41817"
-     inkscape:cy="263.77786"
+     inkscape:zoom="1.2228026"
+     inkscape:cx="-127.16689"
+     inkscape:cy="269.87185"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="mm"
      inkscape:snap-bbox="true"
@@ -69,6 +69,175 @@
        height="128.5"
        x="5.9211732e-17"
        y="168.49997" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="graphics"
+     style="display:inline">
+    <g
+       id="g2492">
+      <path
+         style="display:inline;fill:#ffffff;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 18.737133,187.61471 5.027977,3.36542 v 8.57317 h -4.872358 v 0.66035 h 4.872358 v 12.11275 h -5.030392 v 0.70227 h 4.969921 l 0.03951,8.21995 -4.990884,4.02988 -10e-7,0.76033 c -0.03951,0.15803 5.677027,-4.30644 5.677027,-4.30644 l -1e-6,-31.23603 -5.553669,-3.69114 z"
+         id="path230"
+         transform="translate(0,-168.49998)"
+         sodipodi:nodetypes="ccccccccccccccccc" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2110"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(0.26458333,0,0,0.26458333,0.05097275,-0.00728182)"
+         inkscape:transform-center-x="0.063011423"
+         inkscape:transform-center-y="-0.22573674" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2294"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(-0.21401491,0.15556978,-0.15556978,-0.21401491,50.588922,35.364559)"
+         inkscape:transform-center-x="0.27865933"
+         inkscape:transform-center-y="0.0039293276" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2296"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(-0.21401491,0.15556978,-0.15556978,-0.21401491,50.583429,48.152449)"
+         inkscape:transform-center-x="0.27865933"
+         inkscape:transform-center-y="0.0039293276" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2391"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(-0.07563962,0.2535409,-0.2535409,-0.07563962,46.951525,40.640686)"
+         inkscape:transform-center-x="-0.068511875"
+         inkscape:transform-center-y="-0.22065086" />
+    </g>
+    <g
+       id="g2504"
+       transform="translate(0,50.862377)">
+      <path
+         style="display:inline;fill:#ffffff;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 18.737133,187.61471 5.027977,3.36542 v 8.57317 h -4.872358 v 0.66035 h 4.872358 v 12.11275 h -5.030392 v 0.70227 h 4.969921 l 0.03951,8.21995 -4.990884,4.02988 -10e-7,0.76033 c -0.03951,0.15803 5.677027,-4.30644 5.677027,-4.30644 l -1e-6,-31.23603 -5.553669,-3.69114 z"
+         id="path2494"
+         transform="translate(0,-168.49998)"
+         sodipodi:nodetypes="ccccccccccccccccc" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2496"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(0.26458333,0,0,0.26458333,0.05097275,-0.00728182)"
+         inkscape:transform-center-x="0.063011423"
+         inkscape:transform-center-y="-0.22573674" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2498"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(-0.21401491,0.15556978,-0.15556978,-0.21401491,50.588922,35.364559)"
+         inkscape:transform-center-x="0.27865933"
+         inkscape:transform-center-y="0.0039293276" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2500"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(-0.21401491,0.15556978,-0.15556978,-0.21401491,50.583429,48.152449)"
+         inkscape:transform-center-x="0.27865933"
+         inkscape:transform-center-y="0.0039293276" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path2502"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="80.528915"
+         sodipodi:cy="77.116203"
+         sodipodi:r1="4.2643762"
+         sodipodi:r2="2.1321881"
+         sodipodi:arg1="2.7299213"
+         sodipodi:arg2="3.7771189"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 76.620814,78.822558 4.384406,-5.944047 2.955492,6.769031 z"
+         transform="matrix(-0.07563962,0.2535409,-0.2535409,-0.07563962,46.951525,40.640686)"
+         inkscape:transform-center-x="-0.068511875"
+         inkscape:transform-center-y="-0.22065086" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -138,8 +307,7 @@
      inkscape:label="text"
      style="display:inline">
     <g
-       aria-label="Input 1
-"
+       aria-label="Input 1 "
        id="text741"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path
@@ -162,8 +330,7 @@
          id="path11055" />
     </g>
     <g
-       aria-label="Input 2
-"
+       aria-label="Input 2 "
        id="text741-6"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path
@@ -186,8 +353,7 @@
          id="path10997" />
     </g>
     <g
-       aria-label="Output 1
-"
+       aria-label="Output 1 "
        id="text741-5"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path
@@ -213,8 +379,7 @@
          id="path11042" />
     </g>
     <g
-       aria-label="Output 2
-"
+       aria-label="Output 2 "
        id="text741-5-6"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path
@@ -240,8 +405,7 @@
          id="path11027" />
     </g>
     <g
-       aria-label="Output 3
-"
+       aria-label="Output 3 "
        id="text741-5-4"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path
@@ -267,8 +431,7 @@
          id="path11012" />
     </g>
     <g
-       aria-label="Output 4
-"
+       aria-label="Output 4 "
        id="text741-5-1"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path
@@ -294,8 +457,7 @@
          id="path10984" />
     </g>
     <g
-       aria-label="Output 5
-"
+       aria-label="Output 5 "
        id="text741-5-7"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path
@@ -321,8 +483,7 @@
          id="path10969" />
     </g>
     <g
-       aria-label="Output 6
-"
+       aria-label="Output 6 "
        id="text741-5-9"
        style="font-size:2.46944px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';display:inline;fill:#ffffff;stroke-width:0.264583">
       <path

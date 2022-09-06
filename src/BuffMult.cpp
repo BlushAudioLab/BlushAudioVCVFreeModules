@@ -1,6 +1,5 @@
 #include "plugin.hpp"
 
-
 struct BuffMult : Module {
 	enum ParamId {
 		PARAMS_LEN
@@ -55,17 +54,15 @@ struct BuffMult : Module {
 			out = inputs[AUDIOCVIN2_INPUT].getVoltages();	
 		}
 
-		//routing input to ouputs 4,5,6 "normalled" behaviour from Input A when Input B not connected, using Input B when connected
+		//routing input to ouputs 4,5,6 "normalled" behaviour from Input 1 when Input 2 not connected, using Input 2 when connected
 		outputs[AUDIOCVOUT4_OUTPUT].setChannels(n);
 		outputs[AUDIOCVOUT4_OUTPUT].writeVoltages(out);
 		outputs[AUDIOCVOUT5_OUTPUT].setChannels(n);
 		outputs[AUDIOCVOUT5_OUTPUT].writeVoltages(out);
 		outputs[AUDIOCVOUT6_OUTPUT].setChannels(n);
 		outputs[AUDIOCVOUT6_OUTPUT].writeVoltages(out);
-		
 	}
 };
-
 
 struct BuffMultWidget : ModuleWidget {
 	BuffMultWidget(BuffMult* module) {
@@ -88,6 +85,5 @@ struct BuffMultWidget : ModuleWidget {
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 107.8)), module, BuffMult::AUDIOCVOUT6_OUTPUT));
 	}
 };
-
 
 Model* modelBuffMult = createModel<BuffMult, BuffMultWidget>("BuffMult");
