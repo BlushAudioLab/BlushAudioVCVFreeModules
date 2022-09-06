@@ -37,6 +37,15 @@
       "tags": [
         "Multiple"
       ]
+    },
+    {
+      "slug": "BuffMix",
+      "name": "Buff Mix",
+      "description": "A Mixer",
+      "tags": [
+        "Mixer",
+        "Hardware clone"
+      ]
     }
   ]
 }
