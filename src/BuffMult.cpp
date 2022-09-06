@@ -77,15 +77,15 @@ struct BuffMultWidget : ModuleWidget {
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 21.386)), module, BuffMult::AUDIOCVIN1_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 69.261)), module, BuffMult::AUDIOCVIN2_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 18.73)), module, BuffMult::AUDIOCVIN1_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 69.6)), module, BuffMult::AUDIOCVIN2_INPUT));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 33.355)), module, BuffMult::AUDIOCVOUT1_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 45.324)), module, BuffMult::AUDIOCVOUT2_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 57.292)), module, BuffMult::AUDIOCVOUT3_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 81.23)), module, BuffMult::AUDIOCVOUT4_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 93.199)), module, BuffMult::AUDIOCVOUT5_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 105.167)), module, BuffMult::AUDIOCVOUT6_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 31.5)), module, BuffMult::AUDIOCVOUT1_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 44.1)), module, BuffMult::AUDIOCVOUT2_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 56.9)), module, BuffMult::AUDIOCVOUT3_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 82.3)), module, BuffMult::AUDIOCVOUT4_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 95)), module, BuffMult::AUDIOCVOUT5_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 107.8)), module, BuffMult::AUDIOCVOUT6_OUTPUT));
 	}
 };
 
