@@ -36,6 +36,33 @@ struct BuffMult : Module {
 	}
 
 	void process(const ProcessArgs& args) override {
+
+		//setting up the input
+		int n = inputs[AUDIOCVIN1_INPUT].getChannels();
+		float* out = inputs[AUDIOCVIN1_INPUT].getVoltages();
+
+		//routing input to outputs 1,2,3
+		outputs[AUDIOCVOUT1_OUTPUT].setChannels(n);
+		outputs[AUDIOCVOUT1_OUTPUT].writeVoltages(out);
+		outputs[AUDIOCVOUT2_OUTPUT].setChannels(n);
+		outputs[AUDIOCVOUT2_OUTPUT].writeVoltages(out);
+		outputs[AUDIOCVOUT3_OUTPUT].setChannels(n);
+		outputs[AUDIOCVOUT3_OUTPUT].writeVoltages(out);
+
+		//statement taking care of "normalling" behaviour for all outputs below this - i.e 4,5,6
+		if (inputs[AUDIOCVIN2_INPUT].isConnected()){
+			n = inputs[AUDIOCVIN2_INPUT].getChannels();
+			out = inputs[AUDIOCVIN2_INPUT].getVoltages();	
+		}
+
+		//routing input to ouputs 4,5,6 "normalled" behaviour from Input A when Input B not connected, using Input B when connected
+		outputs[AUDIOCVOUT4_OUTPUT].setChannels(n);
+		outputs[AUDIOCVOUT4_OUTPUT].writeVoltages(out);
+		outputs[AUDIOCVOUT5_OUTPUT].setChannels(n);
+		outputs[AUDIOCVOUT5_OUTPUT].writeVoltages(out);
+		outputs[AUDIOCVOUT6_OUTPUT].setChannels(n);
+		outputs[AUDIOCVOUT6_OUTPUT].writeVoltages(out);
+		
 	}
 };
 
