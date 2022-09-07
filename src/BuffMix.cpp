@@ -1,5 +1,6 @@
 #include "plugin.hpp"
 
+using simd::float_4;
 
 struct BuffMix : Module {
 	enum ParamId {
@@ -11,8 +12,9 @@ struct BuffMix : Module {
 		INPUTS_LEN
 	};
 	enum OutputId {
-		//clever way of setting input numbers - used in for loop later
-		ENUMS(OUT_OUTPUTS, 2),
+		//clever way of setting output numbers - used in for loop later
+		OUT1_OUTPUT,
+		OUT2_OUTPUT,
 		OUTPUTS_LEN
 	};
 	enum LightId {
@@ -25,17 +27,40 @@ struct BuffMix : Module {
 		//for loop that counts through number of inputs and appends the number
 		for (int i = 0; i < 6; i++)
 			configInput(IN_INPUTS + i, string::f("Input %d", i + 1));
-		//for loop that counts through number of outputs and appends the number
-		for (int i = 0; i < 2; i++)
-			configInput(OUT_OUTPUTS + i, string::f("Mix %d", i + 1));
+		configOutput(OUT1_OUTPUT, "Output 1");
+		configOutput(OUT2_OUTPUT, "Output 2");
 	}
+	
 
 	void process(const ProcessArgs& args) override {
 	
+		// number of channels and connected inputs
+		int channels = 1;
+		int connected = 0;
+		for (int i = 0; i < 6; i++){
+			channels = std::max(channels, inputs[IN_INPUTS + i].getChannels());
+			if (inputs[IN_INPUTS + i].isConnected())
+				connected++;
+		}
+		// set the gain to automatically be divided by the number of connected inputs - unity gain by default
+		float gain = 1.f;
+		gain /= std::max(1, connected);
 
 
+		for (int ch = 0; ch < channels; ch += 4){
+			float_4 out = 0.f;
 		
-
+			//mix the inputs
+		
+			for (int i = 0; i < 6; i++){
+				out += inputs[IN_INPUTS + i].getVoltageSimd<float_4>(ch);
+			}
+			// applying the gain
+			out *= gain; 
+			// set outputs
+			outputs[OUT2_OUTPUT].setVoltageSimd(out, ch);
+		}
+		outputs[OUT2_OUTPUT].setChannels(channels);
 	}
 };	
 	
@@ -56,8 +81,8 @@ struct BuffMixWidget : ModuleWidget {
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 82.364)), module, BuffMix::IN_INPUTS + 4));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 95.089)), module, BuffMix::IN_INPUTS + 5));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 56.914)), module, BuffMix::OUT_OUTPUTS + 0));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 107.813)), module, BuffMix::OUT_OUTPUTS + 1));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 56.914)), module, BuffMix::OUT1_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 107.813)), module, BuffMix::OUT2_OUTPUT));
 	}
 };
 
