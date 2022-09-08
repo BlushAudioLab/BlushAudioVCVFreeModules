@@ -14,28 +14,12 @@
   "changelogUrl": "",
   "modules": [
     {
-      "slug": "SimpleOsc",
-      "name": "Simple Oscillator",
-      "description": "Sine Wave Oscillator",
-      "tags": [
-        "Oscillator"
-      ]
-    },
-    {
-      "slug": "ADSR",
-      "name": "ADSR",
-      "description": "ADSR Envelope Generator",
-      "tags": [
-        "ADSR",
-        "Envelope Generator"
-      ]
-    },
-    {
       "slug": "BuffMult",
       "name": "Buff Mult",
       "description": "A Mult",
       "tags": [
-        "Multiple"
+        "Multiple",
+        "Hardware clone"
       ]
     },
     {

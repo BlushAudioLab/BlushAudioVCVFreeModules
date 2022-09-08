@@ -10,8 +10,6 @@ void init(Plugin* p) {
 	// Add modules here
 	// p->addModel(modelMyModule);
 	
-	p->addModel(modelSimpleOsc);
-    p->addModel(modelADSR);
     p->addModel(modelBuffMult);
 	p->addModel(modelBuffMix);
 	
