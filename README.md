@@ -8,7 +8,7 @@ A clone of the Blush Audio Buff Mixer.
 
 1:6 or 2x 1:3 multiple - Input 1 is normalled to Input 2.
 
-![BuffMix](/Users/blushaudiodev/Programming/VCVPlugins/Screenshots/image17.png)
+![BuffMix](https://github.com/BlushAudioLab/BlushAudioVCVFreeModules/blob/master/Screenshots/buffmix.png)
 
 ***
 	
@@ -18,5 +18,5 @@ A clone of the Blush Audio Buff Mult.
  
 6:1 or 2x 3:1 unity mixer - Output 1 is normalled to Output 2.
 
-![BuffMix](/Users/blushaudiodev/Programming/VCVPlugins/Screenshots/image18.png)
+![BuffMix](https://github.com/BlushAudioLab/BlushAudioVCVFreeModules/blob/master/Screenshots/buffmultpng)
 
