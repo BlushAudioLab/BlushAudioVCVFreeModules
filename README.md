@@ -18,5 +18,5 @@ A clone of the Blush Audio Buff Mult.
  
 6:1 or 2x 3:1 unity mixer - Output 1 is normalled to Output 2.
 
-![BuffMix](https://github.com/BlushAudioLab/BlushAudioVCVFreeModules/blob/master/Screenshots/buffmultpng)
+![BuffMix](https://github.com/BlushAudioLab/BlushAudioVCVFreeModules/blob/master/Screenshots/buffmult.png)
 
