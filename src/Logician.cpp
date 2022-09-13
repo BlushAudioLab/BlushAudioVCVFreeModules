@@ -37,12 +37,18 @@ struct Logician : Module {
 
 	void process(const ProcessArgs& args) override {
 		float input1a = inputs[INPUTA1_INPUT].getVoltage();
+		float input1b = inputs[INPUTB1_INPUT].getVoltage();
+		float input2a = inputs[INPUTA2_INPUT].getVoltage();
+		float input2b = inputs[INPUTB2_INPUT].getVoltage();
 		float comparator1 = 5.0f;
+		float comparator2 = 5.0f;
 
 		const bool greaterThan = (input1a >= comparator1);
-		const bool lessThan = (input1a < comparator1);
+		const bool greaterThan2 = (input1b >= comparator1);
+		const bool greaterThan3 = (input2a >= comparator2);
+		const bool greaterThan4 = (input2b >= comparator2);
 
-		if ((input1a = greaterThan)){
+		if ((input1a = greaterThan) && (input1b = greaterThan2)){
 			//set output voltage to high (10V)
 			outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 			//set LED High
@@ -54,6 +60,19 @@ struct Logician : Module {
 			outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 			//set LED Low
 			lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+		}
+		if ((input2a = greaterThan3) && (input2b = greaterThan4)){
+			//set output voltage to high (10V)
+			outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+			//set LED High
+			lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+
+		}
+		else{
+			//set output voltage to 0
+			outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+			//set LED Low
+			lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
 		}
 
 		
