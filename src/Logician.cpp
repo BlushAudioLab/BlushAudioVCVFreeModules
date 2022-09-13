@@ -35,6 +35,11 @@ struct Logician : Module {
 	}
 
 	void process(const ProcessArgs& args) override {
+
+		// int mode[4] = {1,2,3,4};
+		int modeA = 1;
+		// int mode[4] = {1,2,3,4};
+		int modeB = 5;
 		float input1a = inputs[INPUTA1_INPUT].getVoltage();
 		float input1b = inputs[INPUTB1_INPUT].getVoltage();
 		float input2a = inputs[INPUTA2_INPUT].getVoltage();
@@ -47,184 +52,229 @@ struct Logician : Module {
 		const bool greaterThan2A = (input2a >= comparator2);
 		const bool greaterThan2B = (input2b >= comparator2);
 
-		//Logic Gate 1
-		// int mode[4] = {1,2,3,4};
-		int modeA = 6;
-		switch(modeA){
-			case 1: //AND
-				if ((input1a = greaterThan1A) && (input1b = greaterThan1B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+//Logic Gate 1
+		if (!(inputs[INPUTA1_INPUT].isConnected())){
+				//set output voltage to 0
+				outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+				//set LED Low
+				lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);		
+		}
+		else{
+			
+			if(!inputs[INPUTB1_INPUT].isConnected()){ //NOT
+				if (!(input1a = greaterThan1A)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+						}
+			}
+			else{
+				switch(modeA){
+					case 1: //AND
+						if ((input1a = greaterThan1A) && (input1b = greaterThan1B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 2: //OR
+						if ((input1a = greaterThan1A) || (input1b = greaterThan1B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 3: //NAND
+						if (!(input1a = greaterThan1A) && !(input1b = greaterThan1B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;		
+					case 4: //NOR
+						if (!(input1a = greaterThan1A) || !(input1b = greaterThan1B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 5: //EXOR
+						if ((input1a = greaterThan1A) != (input1b = greaterThan1B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 6: //EXNOR
+						if ((input1a = greaterThan1A) == (input1b = greaterThan1B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;				
 				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 2: //OR
-				if ((input1a = greaterThan1A) || (input1b = greaterThan1B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 3: //NAND
-				if (!(input1a = greaterThan1A) && !(input1b = greaterThan1B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;		
-			case 4: //NOR
-				if (!(input1a = greaterThan1A) || !(input1b = greaterThan1B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 5: //EXOR
-				if ((input1a = greaterThan1A) != (input1b = greaterThan1B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 6: //EXNOR
-				if ((input1a = greaterThan1A) == (input1b = greaterThan1B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;				
+			}	
 		}
 
-		//Logic Gate 2
-		// int mode[4] = {1,2,3,4};
-		int modeB = 6;
-		switch(modeB){
-			case 1: //AND
-				if ((input2a = greaterThan2A) && (input2b = greaterThan2B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 2: //OR
-				if ((input2a = greaterThan2A) || (input2b = greaterThan2B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 3: //NAND
-				if (!(input2a = greaterThan2A) && !(input2b = greaterThan2B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;		
-			case 4: //NOR
-				if (!(input2a = greaterThan2A) || !(input2b = greaterThan2B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 5: //EXOR
-				if ((input2a = greaterThan2A) != (input2b = greaterThan2B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;
-			case 6: //EXNOR
-				if ((input2a = greaterThan2A) == (input2b = greaterThan2B)){
-					//set output voltage to high (10V)
-					outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
-					//set LED High
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
-				}
-				else{
-					//set output voltage to 0
-					outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
-					//set LED Low
-					lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
-				}
-			break;				
+//Logic Gate 2
+		if (!(inputs[INPUTA2_INPUT].isConnected())){
+				//set output voltage to 0
+				outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+				//set LED Low
+				lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);		
+		}
+		else{
+			if(!inputs[INPUTB2_INPUT].isConnected()){ //NOT
+				if (!(input2a = greaterThan2A)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+						}
+			}
+			else{
+				switch(modeB){
+					case 1: //AND
+						if ((input2a = greaterThan2A) && (input2b = greaterThan2B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 2: //OR
+						if ((input2a = greaterThan2A) || (input2b = greaterThan2B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 3: //NAND
+						if (!(input2a = greaterThan2A) && !(input2b = greaterThan2B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;		
+					case 4: //NOR
+						if (!(input2a = greaterThan2A) || !(input2b = greaterThan2B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 5: //EXOR
+						if ((input2a = greaterThan2A) != (input2b = greaterThan2B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+					case 6: //EXNOR
+						if ((input2a = greaterThan2A) == (input2b = greaterThan2B)){
+							//set output voltage to high (10V)
+							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+							//set LED High
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+						}
+						else{
+							//set output voltage to 0
+							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+							//set LED Low
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+						}
+					break;
+				}		
+			}			
 		}
 
 	}
