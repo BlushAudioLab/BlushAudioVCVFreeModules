@@ -11,3 +11,4 @@ extern Plugin* pluginInstance;
 // extern Model* modelMyModule;
 extern Model* modelBuffMult;
 extern Model* modelBuffMix;
+extern Model* modelLogician;

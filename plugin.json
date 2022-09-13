@@ -30,6 +30,14 @@
         "Mixer",
         "Hardware clone"
       ]
+    },
+    {
+      "slug": "Logician",
+      "name": "Logician",
+      "description": "A logic module",
+      "tags": [
+        "Logic"
+      ]
     }
   ]
 }
