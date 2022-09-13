@@ -36,7 +36,29 @@ struct Logician : Module {
 	}
 
 	void process(const ProcessArgs& args) override {
+		float input1a = inputs[INPUTA1_INPUT].getVoltage();
+		float comparator1 = 5.0f;
+
+		const bool greaterThan = (input1a >= comparator1);
+		const bool lessThan = (input1a < comparator1);
+
+		if ((input1a = greaterThan)){
+			//set output voltage to high (10V)
+			outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+			//set LED High
+			lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+
+		}
+		else{
+			//set output voltage to 0
+			outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+			//set LED Low
+			lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+		}
+
+		
 	}
+
 };
 
 
