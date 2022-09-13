@@ -61,7 +61,7 @@ struct Logician : Module {
 			//set LED Low
 			lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
 		}
-		if ((input2a = greaterThan3) && (input2b = greaterThan4)){
+		if ((input2a = greaterThan3) || (input2b = greaterThan4)){
 			//set output voltage to high (10V)
 			outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 			//set LED High
