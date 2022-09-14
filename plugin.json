@@ -38,6 +38,14 @@
       "tags": [
         "Logic"
       ]
+    },
+    {
+      "slug": "ButtonTest",
+      "name": "ButtonTest",
+      "description": "Testing a button",
+      "tags": [
+        "utility"
+      ]
     }
   ]
 }
