@@ -29,6 +29,19 @@ struct ButtonTest : Module {
 	}
 
 	void process(const ProcessArgs& args) override {
+
+		float state = params[MODE_SWITCH].getValue();
+
+		if(state == 0.0f){
+
+			lights[BLINK_LIGHT].setBrightness(1.0f);
+			lights[BLINK_LIGHT2].setBrightness(0.0f);
+
+		}
+		else{
+			lights[BLINK_LIGHT].setBrightness(0.0f);
+			lights[BLINK_LIGHT2].setBrightness(1.0f);
+		}
 	}
 };
 
@@ -47,9 +60,6 @@ struct ButtonTestWidget : ModuleWidget {
 
 		addChild(createParamCentered<OnOff>(mm2px(Vec(15.24, 23.469)), module, ButtonTest::MODE_SWITCH));
 
-
-		
-
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
@@ -61,15 +71,8 @@ struct ButtonTestWidget : ModuleWidget {
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 77.199)), module, ButtonTest::BLINK_LIGHT4));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 90.49)), module, ButtonTest::BLINK_LIGHT5));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 103.782)), module, ButtonTest::BLINK_LIGHT6));
-
-
-
-
-		// addChild(createWidgetCentered<Widget>(mm2px(Vec(15.24, 23.469))));
-
 		
 	}
 };
-
 
 Model* modelButtonTest = createModel<ButtonTest, ButtonTestWidget>("ButtonTest");
