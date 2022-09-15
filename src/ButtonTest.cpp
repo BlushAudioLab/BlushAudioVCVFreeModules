@@ -3,6 +3,7 @@
 
 struct ButtonTest : Module {
 	enum ParamId {
+		MODE_SWITCH, //my switch to test
 		PARAMS_LEN
 	};
 	enum InputId {
@@ -21,26 +22,33 @@ struct ButtonTest : Module {
 		LIGHTS_LEN
 	};
 
-	// struct sub_sw_2 : SVGSwitch, ToggleSwitch {
-	// 	sub_sw_2() {
-	// 		addFrame(SVG::load(assetPlugin(plugin, "res/Components/sub_sw_2a.svg")));
-	// 		addFrame(SVG::load(assetPlugin(plugin, "res/Components/sub_sw_2b.svg")));
-	// 	}
-	// };
-
 	ButtonTest() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
+
+		configSwitch(MODE_SWITCH, 0.0f, 1.0f, 0.0f, "Mode", {"AND", "OR"});
 	}
 
 	void process(const ProcessArgs& args) override {
 	}
 };
 
+struct OnOff : app::SvgSwitch {
+	OnOff() {
+		momentary = false;
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing2.svg")));		
+	}
+};
 
 struct ButtonTestWidget : ModuleWidget {
 	ButtonTestWidget(ButtonTest* module) {
 		setModule(module);
 		setPanel(createPanel(asset::plugin(pluginInstance, "res/ButtonTest.svg")));
+
+		addChild(createParamCentered<OnOff>(mm2px(Vec(15.24, 23.469)), module, ButtonTest::MODE_SWITCH));
+
+
+		
 
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
@@ -54,7 +62,12 @@ struct ButtonTestWidget : ModuleWidget {
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 90.49)), module, ButtonTest::BLINK_LIGHT5));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 103.782)), module, ButtonTest::BLINK_LIGHT6));
 
-		addChild(createWidgetCentered<Widget>(mm2px(Vec(15.24, 23.469))));
+
+
+
+		// addChild(createWidgetCentered<Widget>(mm2px(Vec(15.24, 23.469))));
+
+		
 	}
 };
 
