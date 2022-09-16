@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1.186mm"
+   height="18.715mm"
+   viewBox="0 0 1.186 18.714999"
+   version="1.1"
+   id="svg381"
+   sodipodi:docname="radio2.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview383"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="9.6023539"
+     inkscape:cx="-3.124234"
+     inkscape:cy="32.439963"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs378" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#f2f2f2;stroke-width:0.434658"
+       id="rect225"
+       width="18.711847"
+       height="2.9848592"
+       x="-0.0063539171"
+       y="-2.1128552"
+       transform="matrix(-0.00292787,0.99999571,-0.99991748,-0.01284669,0,0)" />
+    <rect
+       style="fill:#4d4d4d;stroke-width:0.289738"
+       id="rect677"
+       width="3.2"
+       height="3.1199999"
+       x="-1.007"
+       y="3.175" />
+  </g>
+</svg>

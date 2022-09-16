@@ -87,11 +87,14 @@ struct ButtonTest : Module {
 struct OnOff : app::SvgSwitch {
 	OnOff() {
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing.svg")));
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing2.svg")));
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing3.svg")));
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing4.svg")));
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing5.svg")));
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing6.svg")));		
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/drawing.svg")));
+		
+
+			
 	}
 };
 
@@ -101,19 +104,20 @@ struct ButtonTestWidget : ModuleWidget {
 		setPanel(createPanel(asset::plugin(pluginInstance, "res/ButtonTest.svg")));
 
 		// addChild(createParamCentered<OnOff>(mm2px(Vec(15.24, 23.469)), module, ButtonTest::MODE_SWITCH));
-		addParam(createParamCentered<OnOff>(mm2px(Vec(15.24, 23.469)), module, ButtonTest::MODE_SWITCH));
+		addChild(createParamCentered<OnOff>(mm2px(Vec(15.24, 23.469)), module, ButtonTest::MODE_SWITCH));
 
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 37.324)), module, ButtonTest::BLINK_LIGHT));
+		//addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 37.324)), module, ButtonTest::BLINK_LIGHT));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 50.615)), module, ButtonTest::BLINK_LIGHT2));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 63.907)), module, ButtonTest::BLINK_LIGHT3));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 77.199)), module, ButtonTest::BLINK_LIGHT4));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 90.49)), module, ButtonTest::BLINK_LIGHT5));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(15.24, 103.782)), module, ButtonTest::BLINK_LIGHT6));
+		addChild(createLightCentered<SmallLight<GreenRedLight>>(mm2px(Vec(15.24, 37.324)), module, ButtonTest::BLINK_LIGHT));
 		
 	}
 };
