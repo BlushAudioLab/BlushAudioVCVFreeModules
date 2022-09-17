@@ -1,12 +1,12 @@
 {
   "slug": "BlushAudio",
   "name": "Blush Audio",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "GPL-3.0-or-later",
   "brand": "Blush Audio",
   "author": "Blush Audio",
   "authorEmail": "info@blushaudio.co.uk",
-  "authorUrl": "www.blushaudio.co.uk",
+  "authorUrl": "",
   "pluginUrl": "",
   "manualUrl": "",
   "sourceUrl": "https://github.com/BlushAudioLab/BlushAudioVCVFreeModules",
@@ -37,14 +37,6 @@
       "description": "A logic module",
       "tags": [
         "Logic"
-      ]
-    },
-    {
-      "slug": "ButtonTest",
-      "name": "ButtonTest",
-      "description": "Testing a button",
-      "tags": [
-        "utility"
       ]
     }
   ]
