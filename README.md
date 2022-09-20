@@ -1,6 +1,16 @@
 # Free VCV Modules
 The modules in this repo are licensed under GNU General Public License v3.0
 ***
+	
+**Logician**
+
+2x independent binary gates, with 7 modes (AND, OR, NAND, NOR, XOR, XNOR, NOT).
+
+The NOT gate is accessible when only Input A is connected on each gate.
+
+![BuffMix](https://github.com/BlushAudioLab/BlushAudioVCVFreeModules/blob/master/Screenshots/logician.png)
+
+***
 
 **Buff Mix**
 
