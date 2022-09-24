@@ -66,18 +66,19 @@ struct Logician : Module {
 		
 		float comparator1 = 5.0f;
 		float comparator2 = 5.0f;
-		float hysterisisHigh1 = 5.5;
-		float hysterisisLow1 = 4.5;
-		float hysterisisHigh2 = 5.5;
-		float hysterisisLow2 = 4.5;
+		float hysterisisAmount = 0.5f;
+		float hysterisisHigh1 = 5.0f + hysterisisAmount;
+		float hysterisisLow1 = 5.0f - hysterisisAmount;
+		float hysterisisHigh2 = 5.0f + hysterisisAmount;
+		float hysterisisLow2 = 5.0f - hysterisisAmount;
 
-		const bool low1a = ((input1a < comparator1) && (input1a < hysterisisLow1) && (input1a < hysterisisHigh1));
+		const bool low1a = ((input1a <= comparator1) && (input1a <= hysterisisLow1) && (input1a <= hysterisisHigh1));
 		const bool high1a = ((input1a >= comparator1) && (input1a >= hysterisisLow1) && (input1a >= hysterisisHigh1));
-		const bool low1b = ((input1b < comparator1) && (input1b < hysterisisLow1) && (input1b < hysterisisHigh1));
+		const bool low1b = ((input1b <= comparator1) && (input1b <= hysterisisLow1) && (input1b <= hysterisisHigh1));
 		const bool high1b = ((input1b >= comparator1) && (input1b >= hysterisisLow1) && (input1b >= hysterisisHigh1));
-		const bool low2a = ((input2a < comparator2) && (input2a < hysterisisLow2) && (input2a < hysterisisHigh2));
+		const bool low2a = ((input2a <= comparator2) && (input2a <= hysterisisLow2) && (input2a <= hysterisisHigh2));
 		const bool high2a = ((input2a >= comparator2) && (input2a >= hysterisisLow2) && (input2a >= hysterisisHigh2));
-		const bool low2b = ((input2b < comparator2) && (input2b < hysterisisLow2) && (input2b < hysterisisHigh2));
+		const bool low2b = ((input2b <= comparator2) && (input2b <= hysterisisLow2) && (input2b <= hysterisisHigh2));
 		const bool high2b = ((input2b >= comparator2) && (input2b >= hysterisisLow2) && (input2b >= hysterisisHigh2));
 
 		const bool greaterThan1A = (input1a >= comparator1);
