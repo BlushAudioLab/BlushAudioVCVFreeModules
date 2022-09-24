@@ -63,8 +63,22 @@ struct Logician : Module {
 		float input1b = inputs[INPUTB1_INPUT].getVoltage();
 		float input2a = inputs[INPUTA2_INPUT].getVoltage();
 		float input2b = inputs[INPUTB2_INPUT].getVoltage();
+		
 		float comparator1 = 5.0f;
 		float comparator2 = 5.0f;
+		float hysterisisHigh1 = 5.5;
+		float hysterisisLow1 = 4.5;
+		float hysterisisHigh2 = 5.5;
+		float hysterisisLow2 = 4.5;
+
+		const bool low1a = ((input1a < comparator1) && (input1a < hysterisisLow1) && (input1a < hysterisisHigh1));
+		const bool high1a = ((input1a >= comparator1) && (input1a >= hysterisisLow1) && (input1a >= hysterisisHigh1));
+		const bool low1b = ((input1b < comparator1) && (input1b < hysterisisLow1) && (input1b < hysterisisHigh1));
+		const bool high1b = ((input1b >= comparator1) && (input1b >= hysterisisLow1) && (input1b >= hysterisisHigh1));
+		const bool low2a = ((input2a < comparator2) && (input2a < hysterisisLow2) && (input2a < hysterisisHigh2));
+		const bool high2a = ((input2a >= comparator2) && (input2a >= hysterisisLow2) && (input2a >= hysterisisHigh2));
+		const bool low2b = ((input2b < comparator2) && (input2b < hysterisisLow2) && (input2b < hysterisisHigh2));
+		const bool high2b = ((input2b >= comparator2) && (input2b >= hysterisisLow2) && (input2b >= hysterisisHigh2));
 
 		const bool greaterThan1A = (input1a >= comparator1);
 		const bool greaterThan1B = (input1b >= comparator1);
@@ -119,14 +133,13 @@ struct Logician : Module {
 						lights[EXOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT1_LIGHT].setBrightness(0.0f);
-						if ((input1a = greaterThan1A) && (input1b = greaterThan1B)){
+						if ((input1a = (high1a) && (input1b = (high1b)))){
 							//set output voltage to high (10V)
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
-							
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
 						}
-						else{
+						else if((input1a = (low1a) || (input1b = (low1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED Low
@@ -290,13 +303,13 @@ struct Logician : Module {
 						lights[EXOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT2_LIGHT].setBrightness(0.0f);
-						if ((input2a = greaterThan2A) && (input2b = greaterThan2B)){
+						if ((input2a = high2a) && (input2b = high2b)){
 							//set output voltage to high (10V)
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED High
 							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
 						}
-						else{
+						else if ((input2a = low2a) || (input2b = low2b)){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED Low
