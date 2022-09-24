@@ -81,11 +81,6 @@ struct Logician : Module {
 		const bool low2b = ((input2b <= comparator2) && (input2b <= hysterisisLow2) && (input2b <= hysterisisHigh2));
 		const bool high2b = ((input2b >= comparator2) && (input2b >= hysterisisLow2) && (input2b >= hysterisisHigh2));
 
-		const bool greaterThan1A = (input1a >= comparator1);
-		const bool greaterThan1B = (input1b >= comparator1);
-		const bool greaterThan2A = (input2a >= comparator2);
-		const bool greaterThan2B = (input2b >= comparator2);
-
 //Logic Gate 1
 		//NOT gate if 2nd input is not connected 
 		if (!(inputs[INPUTA1_INPUT].isConnected())){
@@ -111,18 +106,18 @@ struct Logician : Module {
 				lights[EXOR_LIGHT1_LIGHT].setBrightness(0.0f);
 				lights[EXNOR_LIGHT1_LIGHT].setBrightness(0.0f);
 				lights[NOT_LIGHT1_LIGHT].setBrightness(1.0f);
-				if (!(input1a = greaterThan1A)){
-							//set output voltage to high (10V)
-							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
-							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
-						}
-						else{
-							//set output voltage to 0
-							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
-							//set LED Low
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
-						}
+				if ((input1a = low1a)){
+					//set output voltage to high (10V)
+					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
+					//set LED High
+					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+				}
+				else if((input1a = high1a)){
+					//set output voltage to 0
+					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
+					//set LED Low
+					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+				}
 			}
 			else{
 				switch(modeA){
@@ -155,13 +150,13 @@ struct Logician : Module {
 						lights[EXOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT1_LIGHT].setBrightness(0.0f);
-						if ((input1a = greaterThan1A) || (input1b = greaterThan1B)){
+						if ((input1a = (high1a) || (input1b = (high1b)))){
 							//set output voltage to high (10V)
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
 						}
-						else{
+						else if((input1a = (low1a) && (input1b = (low1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED Low
@@ -176,13 +171,13 @@ struct Logician : Module {
 						lights[EXOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT1_LIGHT].setBrightness(0.0f);
-						if (!(input1a = greaterThan1A) && !(input1b = greaterThan1B)){
+						if ((input1a = (low1a) && (input1b = (low1b)))){
 							//set output voltage to high (10V)
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
 						}
-						else{
+						else if((input1a = (high1a) || (input1b = (high1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED Low
@@ -197,20 +192,20 @@ struct Logician : Module {
 						lights[EXOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT1_LIGHT].setBrightness(0.0f);
-						if (!(input1a = greaterThan1A) || !(input1b = greaterThan1B)){
+						if ((input1a = (low1a) || (input1b = (low1b)))){
 							//set output voltage to high (10V)
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
 						}
-						else{
+						else if((input1a = (high1a) && (input1b = (high1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED Low
 							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
 						}
 					break;
-					case 5: //EXOR
+					case 5: //XOR
 						lights[AND_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[OR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[NAND_LIGHT1_LIGHT].setBrightness(0.0f);
@@ -218,20 +213,20 @@ struct Logician : Module {
 						lights[EXOR_LIGHT1_LIGHT].setBrightness(1.0f);
 						lights[EXNOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT1_LIGHT].setBrightness(0.0f);
-						if ((input1a = greaterThan1A) != (input1b = greaterThan1B)){
+						if ((input1a = (low1a) != (input1b = (low1b)))){
 							//set output voltage to high (10V)
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
 						}
-						else{
+						else if((input1a = (high1a) == (input1b = (high1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED Low
 							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
 						}
 					break;
-					case 6: //EXNOR
+					case 6: //XNOR
 						lights[AND_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[OR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[NAND_LIGHT1_LIGHT].setBrightness(0.0f);
@@ -239,13 +234,13 @@ struct Logician : Module {
 						lights[EXOR_LIGHT1_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT1_LIGHT].setBrightness(1.0f);
 						lights[NOT_LIGHT1_LIGHT].setBrightness(0.0f);
-						if ((input1a = greaterThan1A) == (input1b = greaterThan1B)){
+						if ((input1a = (low1a) == (input1b = (low1b)))){
 							//set output voltage to high (10V)
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
 						}
-						else{
+						else if((input1a = (high1a) != (input1b = (high1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED Low
@@ -281,18 +276,18 @@ struct Logician : Module {
 			lights[EXOR_LIGHT2_LIGHT].setBrightness(0.0f);
 			lights[EXNOR_LIGHT2_LIGHT].setBrightness(0.0f);
 			lights[NOT_LIGHT2_LIGHT].setBrightness(1.0f);
-				if (!(input2a = greaterThan2A)){
-							//set output voltage to high (10V)
-							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
-							//set LED High
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
-						}
-						else{
-							//set output voltage to 0
-							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
-							//set LED Low
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
-						}
+			if ((input2a = low2a)){
+				//set output voltage to high (10V)
+				outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
+				//set LED High
+				lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+			}
+			else if((input2a = high2a)){
+				//set output voltage to 0
+				outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
+				//set LED Low
+				lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+			}
 			}
 			else{
 				switch(modeB){
@@ -325,13 +320,13 @@ struct Logician : Module {
 						lights[EXOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT2_LIGHT].setBrightness(0.0f);
-						if ((input2a = greaterThan2A) || (input2b = greaterThan2B)){
+						if ((input2a = (high2a) || (input2b = (high2b)))){
 							//set output voltage to high (10V)
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED High
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);				
 						}
-						else{
+						else if((input2a = (low2a) && (input2b = (low2b)))){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED Low
@@ -346,13 +341,13 @@ struct Logician : Module {
 						lights[EXOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT2_LIGHT].setBrightness(0.0f);
-						if (!(input2a = greaterThan2A) && !(input2b = greaterThan2B)){
+						if ((input2a = low2a) && (input2b = low2b)){
 							//set output voltage to high (10V)
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED High
 							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
 						}
-						else{
+						else if ((input2a = high2a) || (input2b = high2b)){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED Low
@@ -367,20 +362,20 @@ struct Logician : Module {
 						lights[EXOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[EXNOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT2_LIGHT].setBrightness(0.0f);
-						if (!(input2a = greaterThan2A) || !(input2b = greaterThan2B)){
+						if ((input2a = low2a) || (input2b = low2b)){
 							//set output voltage to high (10V)
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED High
 							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
 						}
-						else{
+						else if ((input2a = low2a) && (input2b = low2b)){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED Low
 							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
 						}
 					break;
-					case 5: //EXOR
+					case 5: //XOR
 						lights[AND_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[OR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[NAND_LIGHT2_LIGHT].setBrightness(0.0f);
@@ -388,20 +383,20 @@ struct Logician : Module {
 						lights[EXOR_LIGHT2_LIGHT].setBrightness(1.0f);
 						lights[EXNOR_LIGHT2_LIGHT].setBrightness(0.0f);
 						lights[NOT_LIGHT2_LIGHT].setBrightness(0.0f);
-						if ((input2a = greaterThan2A) != (input2b = greaterThan2B)){
+						if ((input2a = high2a) != (input2b = high2b)){
 							//set output voltage to high (10V)
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED High
 							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
 						}
-						else{
+						else if ((input2a = low2a) == (input2b = low2b)){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED Low
 							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
 						}
 					break;
-					case 6: //EXNOR
+					case 6: //XNOR
 							lights[AND_LIGHT2_LIGHT].setBrightness(0.0f);
 							lights[OR_LIGHT2_LIGHT].setBrightness(0.0f);
 							lights[NAND_LIGHT2_LIGHT].setBrightness(0.0f);
@@ -409,13 +404,13 @@ struct Logician : Module {
 							lights[EXOR_LIGHT2_LIGHT].setBrightness(0.0f);
 							lights[EXNOR_LIGHT2_LIGHT].setBrightness(1.0f);
 							lights[NOT_LIGHT2_LIGHT].setBrightness(0.0f);
-						if ((input2a = greaterThan2A) == (input2b = greaterThan2B)){
+						if ((input2a = high2a) == (input2b = high2b)){
 							//set output voltage to high (10V)
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED High
 							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
 						}
-						else{
+						else if ((input2a = low2a) != (input2b = low2b)){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED Low
