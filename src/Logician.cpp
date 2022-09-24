@@ -313,19 +313,13 @@ struct LogicianWidget : ModuleWidget {
 
 		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 55.0)), module, Logician::AND_LIGHT1_LIGHT));
 		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 58.0)), module, Logician::OR_LIGHT1_LIGHT));
-		// addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 61.0)), module, Logician::NAND_LIGHT1_LIGHT));
-		// addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 64.0)), module, Logician::NOR_LIGHT1_LIGHT));
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 67.0)), module, Logician::XOR_LIGHT1_LIGHT));
-		// addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 70.0)), module, Logician::XNOR_LIGHT1_LIGHT));
-		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(8.89, 73.0)), module, Logician::NOT_LIGHT1_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 61.0)), module, Logician::XOR_LIGHT1_LIGHT));
+		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(8.89, 64.0)), module, Logician::NOT_LIGHT1_LIGHT));
 
 		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 55.0)), module, Logician::AND_LIGHT2_LIGHT));
 		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 58.0)), module, Logician::OR_LIGHT2_LIGHT));
-		// addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 61.0)), module, Logician::NAND_LIGHT2_LIGHT));
-		// addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 64.0)), module, Logician::NOR_LIGHT2_LIGHT));
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 67.0)), module, Logician::XOR_LIGHT2_LIGHT));
-		// addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 70.0)), module, Logician::XNOR_LIGHT2_LIGHT));
-		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(22.182, 73.0)), module, Logician::NOT_LIGHT2_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 61.0)), module, Logician::XOR_LIGHT2_LIGHT));
+		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(22.182, 64.0)), module, Logician::NOT_LIGHT2_LIGHT));
 
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 19.269)), module, Logician::INPUT1A_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.182, 19.269)), module, Logician::INPUT1B_INPUT));
