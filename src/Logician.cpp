@@ -21,8 +21,10 @@ struct Logician : Module {
 		OUTPUTS_LEN
 	};
 	enum LightId {
-		OUTPUT1HIGH_LIGHT,
-		OUTPUT2HIGH_LIGHT,
+		OUTPUT1HIGHGREEN_LIGHT,
+		OUTPUT1HIGHRED_LIGHT,
+		OUTPUT2HIGHGREEN_LIGHT,
+		OUTPUT2HIGHRED_LIGHT,
 		AND_LIGHT1_LIGHT,
 		OR_LIGHT1_LIGHT,
 		NAND_LIGHT1_LIGHT,
@@ -51,8 +53,8 @@ struct Logician : Module {
 		configOutput(OUTPUT1_OUTPUT, "Output 1");
 		configOutput(OUTPUT2_OUTPUT, "Output 2");
 		configOutput(INVOUTPUT2_OUTPUT, "Output 2 Inverted");
-		configLight(OUTPUT1HIGH_LIGHT, "Output 1 High");
-		configLight(OUTPUT2HIGH_LIGHT, "Output 2 High");
+		configLight(OUTPUT1HIGHGREEN_LIGHT, "Output 1 High");
+		configLight(OUTPUT2HIGHRED_LIGHT, "Output 2 High");
 	}
 
 	void process(const ProcessArgs& args) override {
@@ -95,7 +97,8 @@ struct Logician : Module {
 				outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 				outputs[INVOUTPUT1_OUTPUT].setVoltage(0.0f);
 				//set LED Low
-				lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);	
+				lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(0.0f);	
+				lights[OUTPUT1HIGHRED_LIGHT].setBrightness(0.0f);
 		}
 		else{
 			
@@ -109,14 +112,16 @@ struct Logician : Module {
 					outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 					outputs[INVOUTPUT1_OUTPUT].setVoltage(0.0f);
 					//set LED High
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);
+					lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(1.0f);
+					lights[OUTPUT1HIGHRED_LIGHT].setBrightness(0.0f);
 				}
 				else if((input1a = high1a)){
 					//set output voltage to 0
 					outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 					outputs[INVOUTPUT1_OUTPUT].setVoltage(10.0f);
 					//set LED Low
-					lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+					lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(0.0f);
+					lights[OUTPUT1HIGHRED_LIGHT].setBrightness(1.0f);
 				}
 			}
 			else{
@@ -131,14 +136,16 @@ struct Logician : Module {
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							outputs[INVOUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
+							lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGHRED_LIGHT].setBrightness(0.0f);				
 						}
 						else if((input1a = (low1a) || (input1b = (low1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							outputs[INVOUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED Low
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT1HIGHRED_LIGHT].setBrightness(1.0f);
 						}
 					break;
 					case 2: //OR1
@@ -151,14 +158,16 @@ struct Logician : Module {
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							outputs[INVOUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
+							lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGHRED_LIGHT].setBrightness(0.0f);				
 						}
 						else if((input1a = (low1a) && (input1b = (low1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							outputs[INVOUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED Low
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT1HIGHRED_LIGHT].setBrightness(1.0f);
 						}
 					break;	
 					case 3: //XOR1
@@ -171,14 +180,16 @@ struct Logician : Module {
 							outputs[OUTPUT1_OUTPUT].setVoltage(10.0f);
 							outputs[INVOUTPUT1_OUTPUT].setVoltage(0.0f);
 							//set LED High
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(1.0f);				
+							lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT1HIGHRED_LIGHT].setBrightness(0.0f);			
 						}
 						else if((input1a = (high1a) == (input1b = (high1b)))){
 							//set output voltage to 0
 							outputs[OUTPUT1_OUTPUT].setVoltage(0.0f);
 							outputs[INVOUTPUT1_OUTPUT].setVoltage(10.0f);
 							//set LED Low
-							lights[OUTPUT1HIGH_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT1HIGHGREEN_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT1HIGHRED_LIGHT].setBrightness(1.0f);
 						}
 					break;		
 				}
@@ -196,7 +207,8 @@ struct Logician : Module {
 				outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 				outputs[INVOUTPUT2_OUTPUT].setVoltage(0.0f);
 				//set LED Low
-				lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);		
+				lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(0.0f);
+				lights[OUTPUT2HIGHRED_LIGHT].setBrightness(0.0f);		
 		}
 		else{
 			if(!inputs[INPUT2B_INPUT].isConnected()){ //NOT
@@ -210,14 +222,16 @@ struct Logician : Module {
 				outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 				outputs[INVOUTPUT2_OUTPUT].setVoltage(0.0f);
 				//set LED High
-				lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+				lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(1.0f);
+				lights[OUTPUT2HIGHRED_LIGHT].setBrightness(0.0f);
 			}
 			else if((input2a = high2a)){
 				//set output voltage to 0
 				outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 				outputs[INVOUTPUT2_OUTPUT].setVoltage(10.0f);
 				//set LED Low
-				lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+				lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(0.0f);
+				lights[OUTPUT2HIGHRED_LIGHT].setBrightness(1.0f);
 			}
 			}
 			else{
@@ -232,14 +246,16 @@ struct Logician : Module {
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							outputs[INVOUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED High
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT2HIGHRED_LIGHT].setBrightness(0.0f);
 						}
 						else if ((input2a = low2a) || (input2b = low2b)){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							outputs[INVOUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED Low
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT2HIGHRED_LIGHT].setBrightness(1.0f);
 						}
 					break;
 					case 2: //OR2
@@ -252,14 +268,16 @@ struct Logician : Module {
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							outputs[INVOUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED High
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);				
+							lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT2HIGHRED_LIGHT].setBrightness(0.0f);				
 						}
 						else if((input2a = (low2a) && (input2b = (low2b)))){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							outputs[INVOUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED Low
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT2HIGHRED_LIGHT].setBrightness(1.0f);
 						}
 					break;
 					case 3: //XOR2
@@ -272,14 +290,16 @@ struct Logician : Module {
 							outputs[OUTPUT2_OUTPUT].setVoltage(10.0f);
 							outputs[INVOUTPUT2_OUTPUT].setVoltage(0.0f);
 							//set LED High
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(1.0f);
+							lights[OUTPUT2HIGHRED_LIGHT].setBrightness(0.0f);
 						}
 						else if ((input2a = low2a) == (input2b = low2b)){
 							//set output voltage to 0
 							outputs[OUTPUT2_OUTPUT].setVoltage(0.0f);
 							outputs[INVOUTPUT2_OUTPUT].setVoltage(10.0f);
 							//set LED Low
-							lights[OUTPUT2HIGH_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT2HIGHGREEN_LIGHT].setBrightness(0.0f);
+							lights[OUTPUT2HIGHRED_LIGHT].setBrightness(1.0f);
 						}
 					break;
 				}		
@@ -331,8 +351,8 @@ struct LogicianWidget : ModuleWidget {
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(8.89, 107.703)), module, Logician::OUTPUT2_OUTPUT));
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.182, 107.703)), module, Logician::INVOUTPUT2_OUTPUT));
 
-		// addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(22.182, 36.794)), module, Logician::OUTPUT1HIGH_LIGHT));
-		// addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(22.182, 107.703)), module, Logician::OUTPUT2HIGH_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenRedLight>>(mm2px(Vec(15.536, 36.794)), module, Logician::OUTPUT1HIGHGREEN_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenRedLight>>(mm2px(Vec(15.536, 107.703)), module, Logician::OUTPUT2HIGHGREEN_LIGHT));
 	}
 };
 
