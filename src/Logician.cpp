@@ -303,13 +303,22 @@ struct Logician : Module {
 	}
 };
 
-struct ModeSwitch : app::SvgSwitch {
-	ModeSwitch() {
+struct ModeSwitch1 : app::SvgSwitch {
+	ModeSwitch1() {
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton.svg")));
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton.svg")));
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton.svg")));
 	}
 };
+
+struct ModeSwitch2 : app::SvgSwitch {
+	ModeSwitch2() {
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton2.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton2.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton2.svg")));
+	}
+};
+
 
 struct LogicianWidget : ModuleWidget {
 	LogicianWidget(Logician* module) {
@@ -322,18 +331,18 @@ struct LogicianWidget : ModuleWidget {
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
 		
-		addChild(createParamCentered<ModeSwitch>(mm2px(Vec(8.89, 50.0)), module, Logician::MODE_SWITCH1));
-		addChild(createParamCentered<ModeSwitch>(mm2px(Vec(22.182, 50.0)), module, Logician::MODE_SWITCH2));
+		addChild(createParamCentered<ModeSwitch1>(mm2px(Vec(8.89, 48.5)), module, Logician::MODE_SWITCH1));
+		addChild(createParamCentered<ModeSwitch2>(mm2px(Vec(22.182, 48.5)), module, Logician::MODE_SWITCH2));
 
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 56.5)), module, Logician::AND_LIGHT1_LIGHT));
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 61.376)), module, Logician::OR_LIGHT1_LIGHT));
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(8.89, 66.252)), module, Logician::XOR_LIGHT1_LIGHT));
-		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(8.89, 71.128)), module, Logician::NOT_LIGHT1_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(6.89, 57.029)), module, Logician::AND_LIGHT1_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(6.89, 63.001)), module, Logician::OR_LIGHT1_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(6.89, 68.973)), module, Logician::XOR_LIGHT1_LIGHT));
+		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(6.89, 74.945)), module, Logician::NOT_LIGHT1_LIGHT));
 
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 56.5)), module, Logician::AND_LIGHT2_LIGHT));
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 61.376)), module, Logician::OR_LIGHT2_LIGHT));
-		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(22.182, 66.252)), module, Logician::XOR_LIGHT2_LIGHT));
-		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(22.182, 71.128)), module, Logician::NOT_LIGHT2_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(24.182, 57.029)), module, Logician::AND_LIGHT2_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(24.182, 63.001)), module, Logician::OR_LIGHT2_LIGHT));
+		addChild(createLightCentered<SmallLight<GreenLight>>(mm2px(Vec(24.182, 68.973)), module, Logician::XOR_LIGHT2_LIGHT));
+		addChild(createLightCentered<SmallLight<RedLight>>(mm2px(Vec(24.182, 74.945)), module, Logician::NOT_LIGHT2_LIGHT));
 
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 19.269)), module, Logician::INPUT1A_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.182, 19.269)), module, Logician::INPUT1B_INPUT));
