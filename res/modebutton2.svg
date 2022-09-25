@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="7.0999999mm"
+   height="7.0999999mm"
+   viewBox="0 0 7.0999999 7.0999999"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   sodipodi:docname="modebutton2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="18.960074"
+     inkscape:cx="13.34383"
+     inkscape:cy="17.695079"
+     inkscape:window-width="1920"
+     inkscape:window-height="965"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g14639" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g14639"
+       transform="translate(-0.970581,1.4156267)"
+       style="fill:#ffffff">
+      <circle
+         style="fill:#550000;stroke-width:0.0459363"
+         id="path49"
+         cx="4.5205808"
+         cy="2.1343732"
+         r="3.5499997" />
+      <circle
+         style="fill:none;stroke:#550000;stroke-width:0.0456411"
+         id="circle6182"
+         cx="4.5205808"
+         cy="2.1343729"
+         r="3.5271795" />
+      <g
+         id="g17050"
+         transform="matrix(1.0441176,0,0,1.0441176,-0.0428197,0.06245407)">
+        <g
+           aria-label="mode"
+           id="text374"
+           style="font-size:1.76389px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';stroke-width:0.264583">
+          <path
+             d="M 2.9032865,0.89958166 V 1.6756933 H 2.5787307 V 1.1676929 L 2.2559389,1.6756933 1.933147,1.1676929 V 1.6756933 H 1.6085912 V 0.89958166 q 0,-0.0811389 0.056445,-0.13758342 0.058208,-0.0564445 0.1375834,-0.0564445 H 1.9454942 L 2.2559389,1.1941513 2.5663835,0.70555376 h 0.1428751 q 0.079375,0 0.1358195,0.0564445 0.058208,0.0564445 0.058208,0.1375834 z"
+             id="path17052" />
+          <path
+             d="M 3.9847992,1.4164014 V 0.96484559 H 3.4662155 V 1.4164014 Z m 0.128764,-0.71084764 q 0.081139,0 0.1375834,0.0564445 0.056444,0.0564445 0.056444,0.13758342 V 1.4816654 q 0,0.081139 -0.056444,0.1375834 -0.056445,0.056445 -0.1375834,0.056445 H 3.3374515 q -0.081139,0 -0.1375834,-0.056445 -0.056445,-0.056445 -0.056445,-0.1375834 V 0.89958166 q 0,-0.0811389 0.056445,-0.13758342 0.056444,-0.0564445 0.1375834,-0.0564445 z"
+             id="path17054" />
+          <path
+             d="m 5.5260532,0.70555376 q 0.081139,0 0.1375834,0.0564445 0.056444,0.0564445 0.056444,0.13758342 V 1.4816654 q 0,0.081139 -0.056444,0.1375834 -0.056445,0.056445 -0.1375834,0.056445 H 4.5559137 V 0.70555376 Z M 5.3972892,1.4164014 V 0.96484559 H 4.8787055 V 1.4164014 Z"
+             id="path17056" />
+          <path
+             d="M 6.2911954,0.96484559 V 1.0618595 H 6.987932 v 0.257528 H 6.2911954 v 0.097014 H 7.132571 V 1.6756933 H 6.1624314 q -0.081139,0 -0.1375834,-0.056445 Q 5.968403,1.5628033 5.968403,1.4816649 V 0.89958166 q 0,-0.0811389 0.056445,-0.13758342 0.056444,-0.0564445 0.1375834,-0.0564445 H 7.132571 v 0.25929183 z"
+             id="path17058" />
+        </g>
+        <g
+           aria-label="2  "
+           id="text12702"
+           style="font-size:1.76389px;line-height:1.25;font-family:Excluded;-inkscape-font-specification:'Excluded, Normal';stroke-width:0.264583">
+          <path
+             d="m 4.8556508,2.2930536 v 0.4198058 q 0,0.081139 -0.058208,0.1375835 -0.056444,0.056444 -0.1358196,0.056444 h -0.45332 v 0.097014 H 4.8556508 V 3.2631931 H 3.8855113 V 2.8433873 q 0,-0.081139 0.056445,-0.1375834 0.056445,-0.056445 0.1375834,-0.056445 H 4.5328589 V 2.5523454 H 3.8855113 V 2.2930536 Z"
+             id="path17061" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1.4213004"
+       y="2.3048115"
+       id="text7926"><tspan
+         sodipodi:role="line"
+         id="tspan7924"
+         style="stroke-width:0.264583"
+         x="-1.4213004"
+         y="2.3048115" /></text>
+  </g>
+</svg>
