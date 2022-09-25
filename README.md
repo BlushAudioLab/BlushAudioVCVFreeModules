@@ -4,9 +4,9 @@ The modules in this repo are licensed under GNU General Public License v3.0
 	
 **Logician**
 
-2x independent binary gates, with 7 modes (AND, OR, NAND, NOR, XOR, XNOR, NOT).
+2x independent binary gates. AND, OR, & XOR modes on first output, and NAND, NOR, & XNOR (inverted states) on second output.
 
-The NOT gate is accessible when only Input A is connected on each gate.
+A NOT gate is accessible when only Input A is connected on each gate.
 
 ![BuffMix](https://github.com/BlushAudioLab/BlushAudioVCVFreeModules/blob/master/Screenshots/logician.png)
 
