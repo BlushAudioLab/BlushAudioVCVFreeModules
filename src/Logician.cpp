@@ -65,7 +65,7 @@ struct Logician : Module {
 		
 		float comparator1 = 5.0f;
 		float comparator2 = 5.0f;
-		float hysterisisAmount = 0.2f;
+		float hysterisisAmount = 0.1f;
 		float hysterisisHigh1 = 5.0f + hysterisisAmount;
 		float hysterisisLow1 = 5.0f - hysterisisAmount;
 		float hysterisisHigh2 = 5.0f + hysterisisAmount;
