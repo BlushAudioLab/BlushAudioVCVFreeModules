@@ -87,20 +87,20 @@ struct BuffMixWidget : ModuleWidget {
 		setModule(module);
 		setPanel(createPanel(asset::plugin(pluginInstance, "res/BuffMix.svg")));
 
-		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
-		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
-		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
-		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, 0)));
+		// addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
+		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+		// addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 18.74)), module, BuffMix::IN_INPUTS + 0));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 31.465)), module, BuffMix::IN_INPUTS + 1));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 44.19)), module, BuffMix::IN_INPUTS + 2));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 69.639)), module, BuffMix::IN_INPUTS + 3));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 82.364)), module, BuffMix::IN_INPUTS + 4));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 95.089)), module, BuffMix::IN_INPUTS + 5));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 18.74)), module, BuffMix::IN_INPUTS + 0));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 31.465)), module, BuffMix::IN_INPUTS + 1));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 44.19)), module, BuffMix::IN_INPUTS + 2));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 69.639)), module, BuffMix::IN_INPUTS + 3));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 82.364)), module, BuffMix::IN_INPUTS + 4));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 95.089)), module, BuffMix::IN_INPUTS + 5));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 56.914)), module, BuffMix::OUT1_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 107.813)), module, BuffMix::OUT2_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 56.914)), module, BuffMix::OUT1_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 107.813)), module, BuffMix::OUT2_OUTPUT));
 	}
 };
 
