@@ -37,45 +37,84 @@ struct BuffMix : Module {
 		// number of channels and connected inputs
 		int channels = 1;
 		int connected = 0;
-		for (int i = 0; i < 6; i++){
-			channels = std::max(channels, inputs[IN_INPUTS + i].getChannels());
-			if (inputs[IN_INPUTS + i].isConnected())
-				connected++;
+
+		if (((outputs[OUT1_OUTPUT].isConnected() && (!(outputs[OUT2_OUTPUT].isConnected()))))){
+			for (int i = 0; i < 3; i++){
+				channels = std::max(channels, inputs[IN_INPUTS + i].getChannels());
+				if (inputs[IN_INPUTS + i].isConnected())
+					connected++;
+			}
+		}
+		else if (((outputs[OUT1_OUTPUT].isConnected() && ((outputs[OUT2_OUTPUT].isConnected()))))){
+			for (int i = 0; i < 3; i++){
+				channels = std::max(channels, inputs[IN_INPUTS + (i + 3)].getChannels());
+				if (inputs[IN_INPUTS + i].isConnected())
+					connected++;
+			}
+		}
+		else{
+			for (int i = 0; i < 6; i++){
+				channels = std::max(channels, inputs[IN_INPUTS + i].getChannels());
+				if (inputs[IN_INPUTS + i].isConnected())
+					connected++;
+			}
 		}
 		// set the gain to automatically be divided by the number of connected inputs - unity gain by default
-		float gain = 1.f;
-		gain /= std::max(1, connected);
-
+		float gain1 = 1.f;
+		gain1 /= std::max(1, connected);
 	
 		for (int ch = 0; ch < channels; ch += 4){
 			float_4 out = 0.f;
 			float_4 out2 = 0.f;
-		
-			//mix the inputs
-			if (outputs[OUT1_OUTPUT].isConnected()){ // if output 1 is connected route inputs 1-3 to output 1 and 4-6 to output 2
-		
+
+			//if only the 1st output is connected route 1-3 to output 1, and ignore 4-6
+			if ((outputs[OUT1_OUTPUT].isConnected() && (!(outputs[OUT2_OUTPUT].isConnected())))){ 	
+				
 				for (int i = 0; i < 3; i++){
 					out += inputs[IN_INPUTS + i].getVoltageSimd<float_4>(ch);
-					out2 += inputs[IN_INPUTS + (i + 3)].getVoltageSimd<float_4>(ch);
+
 				}
+
 				// applying the gain
-				out *= gain;
-				out2 *= gain; 		
+				out *= gain1; 
+				out2 *= 0; 		
+				// set outputs
+				outputs[OUT1_OUTPUT].setVoltageSimd(out, ch);
+				outputs[OUT2_OUTPUT].setVoltageSimd(out2, ch);
+			}	
+
+			//if only the 2nd ouputs is connected route all inputs to output 2
+			else if (!(outputs[OUT1_OUTPUT].isConnected() && ((outputs[OUT2_OUTPUT].isConnected())))){ 	
+				
+				for (int i = 0; i < 6; i++){
+					out2 += inputs[IN_INPUTS + i].getVoltageSimd<float_4>(ch);
+				}
+
+				// applying the gain
+				out *= 0; 
+				out2 *= gain1; 		
 				// set outputs
 				outputs[OUT1_OUTPUT].setVoltageSimd(out, ch);
 				outputs[OUT2_OUTPUT].setVoltageSimd(out2, ch);
 			}
-			else{ // route all 6 inputs to output 2	
+
+			//if both outputs are connected route 1-3 to output 1, are 3-6 to output 2
+			else if ((outputs[OUT1_OUTPUT].isConnected() && ((outputs[OUT2_OUTPUT].isConnected())))){ 	
 				
-				for (int i = 0; i < 6; i++){
+				for (int i = 0; i < 3; i++){
 					out += inputs[IN_INPUTS + i].getVoltageSimd<float_4>(ch);
+					out2 += inputs[IN_INPUTS + (i + 3)].getVoltageSimd<float_4>(ch);
 				}
+
 				// applying the gain
-				out *= gain; 
+				out *= gain1; 
+				out2 *= gain1; 		
 				// set outputs
-				outputs[OUT2_OUTPUT].setVoltageSimd(out, ch);
-			}			
+				outputs[OUT1_OUTPUT].setVoltageSimd(out, ch);
+				outputs[OUT2_OUTPUT].setVoltageSimd(out2, ch);
+			}	
 		}
+
 		//set the channels of each output
 		outputs[OUT1_OUTPUT].setChannels(channels);
 		outputs[OUT2_OUTPUT].setChannels(channels);		
