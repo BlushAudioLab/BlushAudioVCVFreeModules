@@ -24,11 +24,11 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="18.960074"
-     inkscape:cx="13.34383"
-     inkscape:cy="17.695079"
+     inkscape:cx="31.170764"
+     inkscape:cy="19.198237"
      inkscape:window-width="1920"
-     inkscape:window-height="965"
-     inkscape:window-x="0"
+     inkscape:window-height="962"
+     inkscape:window-x="1920"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="g14639" />
@@ -43,13 +43,13 @@
        transform="translate(-0.970581,1.4156267)"
        style="fill:#ffffff">
       <circle
-         style="fill:#550000;stroke-width:0.0459363"
+         style="fill:#ff7522;fill-opacity:1;stroke-width:0.0459363"
          id="path49"
          cx="4.5205808"
          cy="2.1343732"
          r="3.5499997" />
       <circle
-         style="fill:none;stroke:#550000;stroke-width:0.0456411"
+         style="fill:none;stroke:#ffffff;stroke-width:0.0456411;stroke-opacity:1"
          id="circle6182"
          cx="4.5205808"
          cy="2.1343729"

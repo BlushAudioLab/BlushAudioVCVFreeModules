@@ -46,6 +46,7 @@ struct Logician : Module {
 		configInput(INPUT2B_INPUT, "Input 2B");
 		configOutput(OUTPUT1_OUTPUT, "Output 1");
 		configOutput(OUTPUT2_OUTPUT, "Output 2");
+		configOutput(INVOUTPUT1_OUTPUT, "Output 1 Inverted");
 		configOutput(INVOUTPUT2_OUTPUT, "Output 2 Inverted");
 		configLight(OUTPUT1HIGHGREEN_LIGHT, "Output 1 High");
 		configLight(OUTPUT2HIGHRED_LIGHT, "Output 2 High");
@@ -325,10 +326,10 @@ struct LogicianWidget : ModuleWidget {
 		setModule(module);
 		setPanel(createPanel(asset::plugin(pluginInstance, "res/Logician.svg")));
 
-		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
-		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
-		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
-		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, 0)));
+		addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
+		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+		addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
 		
 		addChild(createParamCentered<ModeSwitch1>(mm2px(Vec(8.89, 48.5)), module, Logician::MODE_SWITCH1));
