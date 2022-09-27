@@ -69,20 +69,20 @@ struct BuffMultWidget : ModuleWidget {
 		setModule(module);
 		setPanel(createPanel(asset::plugin(pluginInstance, "res/BuffMult.svg")));
 
-		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
-		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
-		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
-		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, 0)));
+		// addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
+		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+		// addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 18.73)), module, BuffMult::IN1_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 69.6)), module, BuffMult::IN2_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 18.73)), module, BuffMult::IN1_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(12.7, 69.6)), module, BuffMult::IN2_INPUT));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 31.5)), module, BuffMult::OUT1_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 44.1)), module, BuffMult::OUT2_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 56.9)), module, BuffMult::OUT3_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 82.3)), module, BuffMult::OUT4_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 95)), module, BuffMult::OUT5_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 107.8)), module, BuffMult::OUT6_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 31.5)), module, BuffMult::OUT1_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 44.1)), module, BuffMult::OUT2_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 56.9)), module, BuffMult::OUT3_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 82.3)), module, BuffMult::OUT4_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 95)), module, BuffMult::OUT5_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(12.7, 107.8)), module, BuffMult::OUT6_OUTPUT));
 	}
 };
 
