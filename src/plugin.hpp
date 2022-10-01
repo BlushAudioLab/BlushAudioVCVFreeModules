@@ -12,3 +12,4 @@ extern Plugin* pluginInstance;
 extern Model* modelBuffMult;
 extern Model* modelBuffMix;
 extern Model* modelLogician;
+extern Model* modelTrackAndField;
