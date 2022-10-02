@@ -30,9 +30,12 @@ struct TrackAndField : Module {
 	void process(const ProcessArgs& args) override {
 
 		const float gain = 5.f / std::sqrt(2.f);
-		float white = random::normal();
+		white = random::normal();
 
-		if(!(inputs[SAMPLE_INPUT].isConnected())){
+		sampleInput = inputs[SAMPLE_INPUT].getVoltage();
+		triggerInput = inputs[TRIGGER_INPUT].getVoltage();
+
+		if(!(inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > 0.f)){
 			
 			outputs[TF_OUTPUT].setVoltage(white * gain);
 			lights[STATUS_LIGHT].setBrightness(white * gain);
@@ -41,8 +44,16 @@ struct TrackAndField : Module {
 		else{
 
 			outputs[TF_OUTPUT].setVoltage(0);
+			lights[STATUS_LIGHT].setBrightness(0);
 
 		}
+
+		
+
+
+
+
+
 	}
 };
 
