@@ -31,30 +31,36 @@ struct TrackAndField : Module {
 
 		const float gain = 5.f / std::sqrt(2.f);
 		white = random::normal();
-
+		mode = 0;
 		sampleInput = inputs[SAMPLE_INPUT].getVoltage();
 		triggerInput = inputs[TRIGGER_INPUT].getVoltage();
+		threshold = 0.f;
 
-		if(!(inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > 0.f)){
-			
-			outputs[TF_OUTPUT].setVoltage(white * gain);
-			lights[STATUS_LIGHT].setBrightness(white * gain);
+		//Track and Hold mode
+		switch (mode){
+			case 0:
+				//use internal white noise source if no sample input is connected
+				if(!(inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
+				
+					outputs[TF_OUTPUT].setVoltage(white * gain);
+					lights[STATUS_LIGHT].setBrightness(1);
 
+				}
+				//regular old track and hold functionality
+				else if((inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
+				
+					outputs[TF_OUTPUT].setVoltage(sampleInput);
+					lights[STATUS_LIGHT].setBrightness(1);
+
+				}
+				//set everything to 0 if nothing is connected
+				else if(!(inputs[SAMPLE_INPUT].isConnected()) && (!(inputs[TRIGGER_INPUT].isConnected()))){
+					outputs[TF_OUTPUT].setVoltage(0);
+					lights[STATUS_LIGHT].setBrightness(0);
+				}
+			break;
 		}
-		else{
-
-			outputs[TF_OUTPUT].setVoltage(0);
-			lights[STATUS_LIGHT].setBrightness(0);
-
-		}
-
-		
-
-
-
-
-
-	}
+	}		
 };
 
 struct TrackAndFieldWidget : ModuleWidget {
@@ -75,6 +81,5 @@ struct TrackAndFieldWidget : ModuleWidget {
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(22.182, 38.794)), module, TrackAndField::STATUS_LIGHT));
 	}
 };
-
 
 Model* modelTrackAndField = createModel<TrackAndField, TrackAndFieldWidget>("TrackAndField");
