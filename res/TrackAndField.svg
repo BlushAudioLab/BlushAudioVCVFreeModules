@@ -123,7 +123,7 @@
      inkscape:bbox-nodes="false"
      inkscape:snap-bbox-edge-midpoints="false"
      inkscape:window-width="1920"
-     inkscape:window-height="961"
+     inkscape:window-height="959"
      inkscape:window-x="1920"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -164,36 +164,6 @@
        sodipodi:type="rect"
        inkscape:path-effect="#path-effect216"
        d="m 6.0722688,202.99176 h 5.7947242 a 1.2740121,1.2740121 45 0 1 1.274012,1.27401 v 5.85843 a 1.369563,1.369563 135 0 1 -1.369563,1.36956 H 6.0404185 a 1.4014133,1.4014133 45 0 1 -1.4014133,-1.40141 v -5.66733 a 1.4332636,1.4332636 135 0 1 1.4332636,-1.43326 z" />
-    <path
-       style="fill:#ffffff;stroke-width:0.247591"
-       id="path416"
-       width="8.5019999"
-       height="8.5019999"
-       x="17.930672"
-       y="202.99176"
-       sodipodi:type="rect"
-       inkscape:path-effect="#path-effect420"
-       d="m 19.363935,202.99176 h 5.794724 a 1.2740121,1.2740121 45 0 1 1.274013,1.27401 v 5.85843 a 1.369563,1.369563 135 0 1 -1.369563,1.36956 h -5.731024 a 1.4014133,1.4014133 45 0 1 -1.401413,-1.40141 v -5.66733 a 1.4332636,1.4332636 135 0 1 1.433263,-1.43326 z" />
-    <path
-       style="fill:#ffffff;stroke-width:0.247591"
-       id="path875"
-       width="8.5019999"
-       height="8.5019999"
-       x="4.6390052"
-       y="269.95197"
-       sodipodi:type="rect"
-       inkscape:path-effect="#path-effect879"
-       d="m 6.0722688,269.95197 h 5.7947242 a 1.2740121,1.2740121 45 0 1 1.274012,1.27401 v 5.85842 a 1.369563,1.369563 135 0 1 -1.369563,1.36957 H 6.0404185 a 1.4014133,1.4014133 45 0 1 -1.4014133,-1.40142 v -5.66732 a 1.4332636,1.4332636 135 0 1 1.4332636,-1.43326 z" />
-    <path
-       style="fill:#ffffff;stroke-width:0.247591"
-       id="path883"
-       width="8.5019999"
-       height="8.5019999"
-       x="17.930672"
-       y="269.95197"
-       sodipodi:type="rect"
-       inkscape:path-effect="#path-effect887"
-       d="m 19.363935,269.95197 h 5.794724 a 1.2740121,1.2740121 45 0 1 1.274013,1.27401 v 5.85842 a 1.369563,1.369563 135 0 1 -1.369563,1.36957 h -5.731024 a 1.4014133,1.4014133 45 0 1 -1.401413,-1.40142 v -5.66732 a 1.4332636,1.4332636 135 0 1 1.433263,-1.43326 z" />
     <rect
        style="fill:#ff7522;stroke:#ff7522;stroke-width:0.23616;fill-opacity:1;stroke-opacity:1"
        id="rect1043"
