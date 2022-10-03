@@ -29,28 +29,27 @@ struct TrackAndField : Module {
 
 	void process(const ProcessArgs& args) override {
 
-		const float gain = 5.f / std::sqrt(2.f);
-		white = random::normal();
-		mode = 0;
 		sampleInput = inputs[SAMPLE_INPUT].getVoltage();
 		triggerInput = inputs[TRIGGER_INPUT].getVoltage();
-		threshold = 0.f;
-
+		
+		const float gain = 5.f / std::sqrt(2.f);
+		white = random::normal();
+		
 		//Track and Hold mode
 		switch (mode){
 			case 0:
-				//use internal white noise source if no sample input is connected
-				if(!(inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
-				
-					outputs[TF_OUTPUT].setVoltage(white * gain);
-					lights[STATUS_LIGHT].setBrightness(1);
-
-				}
 				//regular old track and hold functionality
-				else if((inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
+				if((inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
 				
 					outputs[TF_OUTPUT].setVoltage(sampleInput);
-					lights[STATUS_LIGHT].setBrightness(1);
+					lights[STATUS_LIGHT].setBrightness(sampleInput);
+
+				}
+				//use internal white noise source if no sample input is connected
+				else if(!(inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
+				
+					outputs[TF_OUTPUT].setVoltage(white * gain);
+					lights[STATUS_LIGHT].setBrightness(white * gain);
 
 				}
 				//set everything to 0 if nothing is connected
@@ -59,7 +58,25 @@ struct TrackAndField : Module {
 					lights[STATUS_LIGHT].setBrightness(0);
 				}
 			break;
+			case 1:
+				//regular old sample and hold functionality
+				if ((inputs[SAMPLE_INPUT].isConnected()) && (schmittTrigger.process(triggerInput))){
+					outputs[TF_OUTPUT].setVoltage(sampleInput);
+					lights[STATUS_LIGHT].setBrightness(sampleInput);
+				}
+				//use internal white noise source if no sample input is connected
+				if (!(inputs[SAMPLE_INPUT].isConnected()) && (schmittTrigger.process(triggerInput))){
+					outputs[TF_OUTPUT].setVoltage(white * gain);
+					lights[STATUS_LIGHT].setBrightness(white * gain);
+				}
+				//set everything to 0 if nothing is connected
+				else if(!(inputs[SAMPLE_INPUT].isConnected()) && (!(inputs[TRIGGER_INPUT].isConnected()))){
+					outputs[TF_OUTPUT].setVoltage(0);
+					lights[STATUS_LIGHT].setBrightness(0);
+				}
+			break;
 		}
+
 	}		
 };
 
