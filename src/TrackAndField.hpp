@@ -1,12 +1,15 @@
 #include "plugin.hpp"
 
-dsp::SchmittTrigger schmittTrigger;
+dsp::SchmittTrigger schmittTriggerA, schmittTriggerB;
 
 float white = random::normal();
-float sampleInput = 0.0;
-float triggerInput = 0.0;
+float sampleInputA = 0.0;
+float triggerInputA = 0.0;
+float sampleInputB = 0.0;
+float triggerInputB = 0.0;
 float threshold = 0.0;
-int mode = 1;
+int modeA = 1;
+int modeB = 1;
 
 
 
