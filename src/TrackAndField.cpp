@@ -40,6 +40,23 @@ struct TrackAndField : Module {
 		//Track and Hold mode
 		switch (mode){
 			case 1:
+				//regular old sample and hold functionality
+				if ((inputs[SAMPLE_INPUT].isConnected()) && (schmittTrigger.process(triggerInput))){
+					outputs[TF_OUTPUT].setVoltage(sampleInput);
+					lights[STATUS_LIGHT].setBrightness(sampleInput);
+				}
+				//use internal white noise source if no sample input is connected
+				if (!(inputs[SAMPLE_INPUT].isConnected()) && (schmittTrigger.process(triggerInput))){
+					outputs[TF_OUTPUT].setVoltage(white * gain);
+					lights[STATUS_LIGHT].setBrightness(white * gain);
+				}
+				//set everything to 0 if nothing is connected
+				else if(!(inputs[SAMPLE_INPUT].isConnected()) && (!(inputs[TRIGGER_INPUT].isConnected()))){
+					outputs[TF_OUTPUT].setVoltage(0);
+					lights[STATUS_LIGHT].setBrightness(0);
+				}
+			break;
+			case 2:
 				//regular old track and hold functionality
 				if((inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
 				
@@ -60,23 +77,6 @@ struct TrackAndField : Module {
 					lights[STATUS_LIGHT].setBrightness(0);
 				}
 			break;
-			case 2:
-				//regular old sample and hold functionality
-				if ((inputs[SAMPLE_INPUT].isConnected()) && (schmittTrigger.process(triggerInput))){
-					outputs[TF_OUTPUT].setVoltage(sampleInput);
-					lights[STATUS_LIGHT].setBrightness(sampleInput);
-				}
-				//use internal white noise source if no sample input is connected
-				if (!(inputs[SAMPLE_INPUT].isConnected()) && (schmittTrigger.process(triggerInput))){
-					outputs[TF_OUTPUT].setVoltage(white * gain);
-					lights[STATUS_LIGHT].setBrightness(white * gain);
-				}
-				//set everything to 0 if nothing is connected
-				else if(!(inputs[SAMPLE_INPUT].isConnected()) && (!(inputs[TRIGGER_INPUT].isConnected()))){
-					outputs[TF_OUTPUT].setVoltage(0);
-					lights[STATUS_LIGHT].setBrightness(0);
-				}
-			break;
 		}
 
 	}		
@@ -84,8 +84,8 @@ struct TrackAndField : Module {
 
 struct ModeSwitch : app::SvgSwitch {
 	ModeSwitch() {
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton.svg")));
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/NKK_2.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/NKK_0.svg")));
 	}
 };
 
