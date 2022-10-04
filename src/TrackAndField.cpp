@@ -3,6 +3,7 @@
 
 struct TrackAndField : Module {
 	enum ParamId {
+		MODE_SWITCH,
 		PARAMS_LEN
 	};
 	enum InputId {
@@ -21,6 +22,7 @@ struct TrackAndField : Module {
 
 	TrackAndField() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
+		configParam(MODE_SWITCH, 0.0f,1.0f,0.0f,"Mode","",0.0f,1.0f,1.0f);
 		configInput(SAMPLE_INPUT, "Sample");
 		configInput(TRIGGER_INPUT, "Trigger");
 		configLight(STATUS_LIGHT, "Status");
@@ -32,12 +34,12 @@ struct TrackAndField : Module {
 		sampleInput = inputs[SAMPLE_INPUT].getVoltage();
 		triggerInput = inputs[TRIGGER_INPUT].getVoltage();
 		
+		mode = params[MODE_SWITCH].getValue() + 1;
 		const float gain = 5.f / std::sqrt(2.f);
-		white = random::normal();
 		
 		//Track and Hold mode
 		switch (mode){
-			case 0:
+			case 1:
 				//regular old track and hold functionality
 				if((inputs[SAMPLE_INPUT].isConnected()) && (triggerInput > threshold)){
 				
@@ -58,7 +60,7 @@ struct TrackAndField : Module {
 					lights[STATUS_LIGHT].setBrightness(0);
 				}
 			break;
-			case 1:
+			case 2:
 				//regular old sample and hold functionality
 				if ((inputs[SAMPLE_INPUT].isConnected()) && (schmittTrigger.process(triggerInput))){
 					outputs[TF_OUTPUT].setVoltage(sampleInput);
@@ -80,6 +82,13 @@ struct TrackAndField : Module {
 	}		
 };
 
+struct ModeSwitch : app::SvgSwitch {
+	ModeSwitch() {
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton.svg")));
+		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/modebutton.svg")));
+	}
+};
+
 struct TrackAndFieldWidget : ModuleWidget {
 	TrackAndFieldWidget(TrackAndField* module) {
 		setModule(module);
@@ -89,6 +98,8 @@ struct TrackAndFieldWidget : ModuleWidget {
 		addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
 		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+
+		addChild(createParamCentered<ModeSwitch>(mm2px(Vec(8.89, 48.5)), module, TrackAndField::MODE_SWITCH));
 
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 21.269)), module, TrackAndField::SAMPLE_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.182, 21.269)), module, TrackAndField::TRIGGER_INPUT));

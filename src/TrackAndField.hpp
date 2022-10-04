@@ -2,7 +2,7 @@
 
 dsp::SchmittTrigger schmittTrigger;
 
-float white = 0.0;
+float white = random::normal();
 float sampleInput = 0.0;
 float triggerInput = 0.0;
 float threshold = 0.0;
