@@ -52,9 +52,9 @@ struct TrackAndField : Module {
 		white = random::normal();
 		const float gain = 5.f / std::sqrt(2.f);
 		
-		//Track and Hold mode
+		//T&F Unit 1
 		switch (modeA){
-			case 1:
+			case 1: //sample and hold
 				//regular old sample and hold functionality
 				if ((inputs[SAMPLE_INPUTA].isConnected()) && (schmittTriggerA.process(triggerInputA))){
 					outputs[TF_OUTPUTA].setVoltage(sampleInputA);
@@ -71,7 +71,7 @@ struct TrackAndField : Module {
 					lights[STATUS_LIGHTA].setBrightness(0);
 				}
 			break;
-			case 2:
+			case 2: //track and hold
 				//regular old track and hold functionality
 				if((inputs[SAMPLE_INPUTA].isConnected()) && (triggerInputA > threshold)){
 				
@@ -93,8 +93,9 @@ struct TrackAndField : Module {
 				}
 			break;
 		}
+		//T&F Unit 2
 		switch (modeB){
-			case 1:
+			case 1: // sample and hold
 				//regular old sample and hold functionality
 				if ((inputs[SAMPLE_INPUTB].isConnected()) && (schmittTriggerB.process(triggerInputB))){
 					outputs[TF_OUTPUTB].setVoltage(sampleInputB);
@@ -111,7 +112,7 @@ struct TrackAndField : Module {
 					lights[STATUS_LIGHTB].setBrightness(0);
 				}
 			break;
-			case 2:
+			case 2: //track and hold
 				//regular old track and hold functionality
 				if((inputs[SAMPLE_INPUTB].isConnected()) && (triggerInputB > threshold)){
 				
@@ -164,16 +165,16 @@ struct TrackAndFieldWidget : ModuleWidget {
 		addChild(createParamCentered<ModeSwitchA>(mm2px(Vec(8.89, 64.250)), module, TrackAndField::MODE_SWITCHA));
 		addChild(createParamCentered<ModeSwitchB>(mm2px(Vec(22.182, 64.250)), module, TrackAndField::MODE_SWITCHB));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 21.269)), module, TrackAndField::SAMPLE_INPUTA));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.182, 21.269)), module, TrackAndField::TRIGGER_INPUTA));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 88.178)), module, TrackAndField::SAMPLE_INPUTB));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.182, 88.178)), module, TrackAndField::TRIGGER_INPUTB));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 27.619)), module, TrackAndField::SAMPLE_INPUTA));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.182, 27.619)), module, TrackAndField::TRIGGER_INPUTA));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 86.061)), module, TrackAndField::SAMPLE_INPUTB));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.182, 86.061)), module, TrackAndField::TRIGGER_INPUTB));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(8.89, 38.794)), module, TrackAndField::TF_OUTPUTA));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(8.89, 105.703)), module, TrackAndField::TF_OUTPUTB));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(8.89, 45.144)), module, TrackAndField::TF_OUTPUTA));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(8.89, 103.586)), module, TrackAndField::TF_OUTPUTB));
 
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(22.182, 38.794)), module, TrackAndField::STATUS_LIGHTA));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(22.182, 105.703)), module, TrackAndField::STATUS_LIGHTB));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(22.182, 45.144)), module, TrackAndField::STATUS_LIGHTA));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(22.182, 103.586)), module, TrackAndField::STATUS_LIGHTB));
 	}
 };
 
