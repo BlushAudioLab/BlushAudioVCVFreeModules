@@ -12,6 +12,16 @@ A NOT gate is accessible when only Input A is connected on each gate.
 
 ***
 
+**Track and Field**
+
+2x Sample/Track & Holds. Switch between Sample & Hold or Track & Hold independently.
+
+If no sample source is connected, internal white noise will be used.
+
+![BuffMix](https://github.com/BlushAudioLab/BlushAudioVCVFreeModules/blob/master/Screenshots/trackandfield.png)
+
+***
+
 **Buff Mix**
 
 A clone of the Blush Audio Buff Mixer.
