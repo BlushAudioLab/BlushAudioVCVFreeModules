@@ -38,6 +38,15 @@
       "tags": [
         "Logic"
       ]
+    },
+    {
+      "slug": "TrackAndField",
+      "name": "Track and Field",
+      "description": "A S&H / T&H module",
+      "tags": [
+        "Sample and hold",
+        "Random"
+      ]
     }
   ]
 }
