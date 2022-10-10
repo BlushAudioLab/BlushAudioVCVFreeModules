@@ -47,6 +47,14 @@
         "Sample and hold",
         "Random"
       ]
+    },
+    {
+      "slug": "Coloratura",
+      "name": "Coloratura",
+      "description": "A chorus/flanger module",
+      "tags": [
+        "modulation"
+      ]
     }
   ]
 }
