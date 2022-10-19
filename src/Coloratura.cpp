@@ -36,21 +36,55 @@ struct Coloratura : Module {
 		configInput(CHORUS_INPUT, "Input");
 		configOutput(CHORUS_OUTPUT, "Output");
 
-		// src = src_new(SRC_SINC_FASTEST, 1, NULL);
+		src = src_new(SRC_SINC_FASTEST, 1, NULL);
 	}
 
 	//destructor
 	~Coloratura() {
-		// src_delete(src); //probably deleting some memory?
+		src_delete(src); //probably deleting some memory?
 	}
 
 	void process(const ProcessArgs& args) override {
 
 		clockFreq = 2.f;
 		float in = inputs[CHORUS_INPUT].getVoltageSum();
-	    float feedback = 1.f;
-		outputs[CHORUS_OUTPUT].setVoltage(in + lastWet * feedback);
+	    // float feedback = 1.f;
+		float feedback = params[FEEDBACK_PARAM].getValue();
+		feedback = clamp(feedback, 0.f, 1.f);
+		float dry = in + (lastWet * feedback);
 
+		float pitch = std::log2(1000.f) - std::log(10000.f) * params[DELAY_PARAM].getValue();
+		float freq = clockFreq / 2.f * std::pow(2.f, pitch);
+		float index = args.sampleRate / freq;
+
+		//push dry sample into the history buffer if the bugger isn't full
+		if(!historyBuffer.full()){
+			historyBuffer.push(dry);
+		}
+
+		if (outBuffer.empty()) {
+			float consume = index - historyBuffer.size();
+			double ratio = std::pow(4.f, clamp(consume / 10000.f, -1.f, 1.f));
+
+			SRC_DATA srcData;
+			srcData.data_in = (const float*) historyBuffer.startData();
+			srcData.data_out = (float*) outBuffer.endData();
+			srcData.input_frames = std::min((int) historyBuffer.size(), 16);
+			srcData.output_frames = outBuffer.capacity();
+			srcData.end_of_input = false;
+			srcData.src_ratio = ratio;
+			src_process(src, &srcData);
+			historyBuffer.startIncr(srcData.input_frames_used);
+			outBuffer.endIncr(srcData.output_frames_gen);
+		}
+
+		float wet = 0.f;
+		if (!outBuffer.empty()) {
+			wet = outBuffer.shift();
+		}
+
+		outputs[CHORUS_OUTPUT].setVoltage(wet / 2);
+		lastWet = wet;
 	}
 };
 
