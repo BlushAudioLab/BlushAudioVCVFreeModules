@@ -129,10 +129,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2483207"
-     inkscape:cx="-37.650582"
+     inkscape:cx="-37.650581"
      inkscape:cy="199.06744"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      showgrid="false"
      units="mm"
      inkscape:snap-bbox="true"
@@ -388,5 +388,33 @@
        cy="103.58636"
        r="4"
        inkscape:label="sine" />
+    <circle
+       r="4"
+       cy="50.140488"
+       cx="8.8900051"
+       id="circle971"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:label="pitch" />
+    <circle
+       r="4"
+       cy="50.140488"
+       cx="22.181999"
+       id="circle973"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:label="pitch" />
+    <circle
+       r="4"
+       cy="28.973801"
+       cx="8.8900051"
+       id="circle1011"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:label="pitch" />
+    <circle
+       r="4"
+       cy="28.973801"
+       cx="22.181999"
+       id="circle1013"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:label="pitch" />
   </g>
 </svg>

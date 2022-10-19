@@ -98,8 +98,10 @@ struct ColoraturaWidget : ModuleWidget {
 		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 103.586)), module, Coloratura::CHORUS_INPUT));
+		addParam(createParamCentered<RoundLargeBlackKnob>(mm2px(Vec(8.89, 50.140)), module, Coloratura::DELAY_PARAM));
+		addParam(createParamCentered<RoundLargeBlackKnob>(mm2px(Vec(22.182, 50.140)), module, Coloratura::FEEDBACK_PARAM));
 
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 103.586)), module, Coloratura::CHORUS_INPUT));
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.182, 103.586)), module, Coloratura::CHORUS_OUTPUT));
 	}
 };
