@@ -5,7 +5,8 @@
 struct Coloratura : Module {
 	enum ParamId {
 		DELAY_PARAM, //delay time
-		REGEN_PARAM, //feedback amount
+		FEEDBACK_PARAM, //feedback amount
+		MIX_PARAM,
 		PARAMS_LEN
 	};
 	enum InputId {
@@ -20,16 +21,6 @@ struct Coloratura : Module {
 		LIGHTS_LEN
 	};
 
-	constexpr static size_t HISTORY_SIZE = 1 << 21;
-	dsp::DoubleRingBuffer<float, HISTORY_SIZE> historyBuffer;
-	dsp::DoubleRingBuffer<float, 16> outBuffer;
-	SRC_STATE* src;
-	float lastWet = 0.f;
-	float clockFreq = 1.f;
-	dsp::Timer clockTimer;
-	dsp::SchmittTrigger clockTrigger;
-	float clockPhase = 0.f;
-
 	//constructor
 	Coloratura() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
@@ -39,20 +30,26 @@ struct Coloratura : Module {
 		const float delayDefault = log10(0.5f * 1000) / 4;
 
 		configParam(DELAY_PARAM, delayMin, delayMax, delayDefault, "Delay", " s", 10.f / 1e-3, 1e-3);
-		configParam(REGEN_PARAM, 0.f, 1.f, 0.5f, "Feedback", "%", 0, 100 );
+		configParam(FEEDBACK_PARAM, 0.f, 1.f, 0.5f, "Feedback", "%", 0, 100 );
+		configParam(MIX_PARAM, 0.0f, 1.0f, 0.5f, "Mix", "%", 0.0f, 100.0f);
 
 		configInput(CHORUS_INPUT, "Input");
 		configOutput(CHORUS_OUTPUT, "Output");
 
-		src = src_new(SRC_SINC_FASTEST, 1, NULL);
+		// src = src_new(SRC_SINC_FASTEST, 1, NULL);
 	}
 
 	//destructor
 	~Coloratura() {
-		src_delete(src); //probably deleting some memory?
+		// src_delete(src); //probably deleting some memory?
 	}
 
 	void process(const ProcessArgs& args) override {
+
+		clockFreq = 2.f;
+		float in = inputs[CHORUS_INPUT].getVoltageSum();
+	    float feedback = 1.f;
+		outputs[CHORUS_OUTPUT].setVoltage(in + lastWet * feedback);
 
 	}
 };
