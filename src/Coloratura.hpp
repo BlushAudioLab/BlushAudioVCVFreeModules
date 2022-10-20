@@ -1,5 +1,5 @@
 #include "plugin.hpp"
-#include "samplerate.h"
+#include <samplerate.h>
 
 constexpr static size_t HISTORY_SIZE = 1 << 21;
 dsp::DoubleRingBuffer<float, HISTORY_SIZE> historyBuffer;

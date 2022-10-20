@@ -4,6 +4,8 @@
 
 struct Coloratura : Module {
 	enum ParamId {
+		RATE_PARAM, //lfo rate
+		DEPTH_PARAM, //lfo depth
 		DELAY_PARAM, //delay time
 		FEEDBACK_PARAM, //feedback amount
 		MIX_PARAM,
@@ -29,6 +31,8 @@ struct Coloratura : Module {
 		const float delayMax = log10(10.f * 1000) / 4;
 		const float delayDefault = log10(0.5f * 1000) / 4;
 
+		configParam(RATE_PARAM, 0.f, 1.f, 0.5f, "Rate", "Hz", 0, 20);
+		configParam(DEPTH_PARAM, 0.f, 1.f, 0.5f, "Depth", "%", 0, 100);
 		configParam(DELAY_PARAM, delayMin, delayMax, delayDefault, "Delay", " s", 10.f / 1e-3, 1e-3);
 		configParam(FEEDBACK_PARAM, 0.f, 1.f, 0.5f, "Feedback", "%", 0, 100 );
 		configParam(MIX_PARAM, 0.0f, 1.0f, 0.5f, "Mix", "%", 0.0f, 100.0f);
@@ -57,7 +61,7 @@ struct Coloratura : Module {
 		float freq = clockFreq / 2.f * std::pow(2.f, pitch);
 		float index = args.sampleRate / freq;
 
-		//push dry sample into the history buffer if the bugger isn't full
+		//push dry sample into the history buffer if the buffer isn't full
 		if(!historyBuffer.full()){
 			historyBuffer.push(dry);
 		}
@@ -98,8 +102,11 @@ struct ColoraturaWidget : ModuleWidget {
 		addChild(createWidget<ScrewBlack>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addParam(createParamCentered<RoundLargeBlackKnob>(mm2px(Vec(8.89, 50.140)), module, Coloratura::DELAY_PARAM));
-		addParam(createParamCentered<RoundLargeBlackKnob>(mm2px(Vec(22.182, 50.140)), module, Coloratura::FEEDBACK_PARAM));
+		addParam(createParamCentered<Davies1900hOrangeKnob>(mm2px(Vec(8.89, 30.974)), module, Coloratura::RATE_PARAM));
+		addParam(createParamCentered<Davies1900hOrangeKnob>(mm2px(Vec(22.182, 30.974)), module, Coloratura::DEPTH_PARAM));
+		addParam(createParamCentered<Davies1900hOrangeKnob>(mm2px(Vec(8.89, 52.140)), module, Coloratura::DELAY_PARAM));
+		addParam(createParamCentered<Davies1900hOrangeKnob>(mm2px(Vec(22.182, 52.140)), module, Coloratura::FEEDBACK_PARAM));
+		
 
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.89, 103.586)), module, Coloratura::CHORUS_INPUT));
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.182, 103.586)), module, Coloratura::CHORUS_OUTPUT));
