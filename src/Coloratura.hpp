@@ -10,3 +10,4 @@ float clockFreq = 1.f;
 dsp::Timer clockTimer;
 dsp::SchmittTrigger clockTrigger;
 float clockPhase = 0.f;
+float phase = 0.f;

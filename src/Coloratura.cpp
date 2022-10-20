@@ -2,6 +2,8 @@
 #include "Coloratura.hpp"
 #include <samplerate.h>
 
+using simd::float_4;
+
 struct Coloratura : Module {
 	enum ParamId {
 		RATE_PARAM, //lfo rate
@@ -31,7 +33,7 @@ struct Coloratura : Module {
 		const float delayMax = log10(10.f * 1000) / 4;
 		const float delayDefault = log10(0.5f * 1000) / 4;
 
-		configParam(RATE_PARAM, 0.f, 1.f, 0.5f, "Rate", "Hz", 0, 20);
+		configParam(RATE_PARAM, 0.f, 20.f, 3.f, "Rate", "Hz", 0, 20);
 		configParam(DEPTH_PARAM, 0.f, 1.f, 0.5f, "Depth", "%", 0, 100);
 		configParam(DELAY_PARAM, delayMin, delayMax, delayDefault, "Delay", " s", 10.f / 1e-3, 1e-3);
 		configParam(FEEDBACK_PARAM, 0.f, 1.f, 0.5f, "Feedback", "%", 0, 100 );
@@ -50,6 +52,18 @@ struct Coloratura : Module {
 
 	void process(const ProcessArgs& args) override {
 
+
+		//modulation
+		float rate = params[RATE_PARAM].getValue();
+		
+		float dean = dsp::FREQ_C4 + std::pow(2.f, rate);
+
+		phase += dean + args.sampleTime;
+		if (phase >= 0.5f)
+			phase -= 1.f;
+
+		float sine = std::sin(2.f * M_PI * phase);
+
 		clockFreq = 2.f;
 		float in = inputs[CHORUS_INPUT].getVoltageSum();
 	    // float feedback = 1.f;
@@ -58,8 +72,21 @@ struct Coloratura : Module {
 		float dry = in + (lastWet * feedback);
 
 		float pitch = std::log2(1000.f) - std::log(10000.f) * params[DELAY_PARAM].getValue();
-		float freq = clockFreq / 2.f * std::pow(2.f, pitch);
-		float index = args.sampleRate / freq;
+		float freq = clockFreq / 2.f * std::pow(2.f, (pitch + sine));
+		float index = args.sampleRate / freq;		
+		
+
+		float depth = params[DEPTH_PARAM].getValue();
+		
+		
+
+		
+		
+
+
+
+
+
 
 		//push dry sample into the history buffer if the buffer isn't full
 		if(!historyBuffer.full()){
