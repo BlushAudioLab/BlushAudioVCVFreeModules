@@ -55,6 +55,14 @@
       "tags": [
         "Modulation"
       ]
+    },
+    {
+      "slug": "rnbo",
+      "name": "rnbo",
+      "description": "A basic RNBO audio effect module",
+      "tags": [
+        "effect"
+      ]
     }
   ]
 }

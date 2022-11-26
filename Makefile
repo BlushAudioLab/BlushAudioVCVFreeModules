@@ -2,15 +2,23 @@
 RACK_DIR ?= ../..
 
 # FLAGS will be passed to both the C and C++ compiler
-FLAGS +=
+FLAGS += -Irnbo-export/rnbo/code
+FLAGS += -Irnbo-export/rnbo
+FLAGS += -Irnbo-export/rnbo/adapters
+FLAGS += -Irnbo-export/rnbo/common
+FLAGS += -Irnbo-export/rnbo/src
 CFLAGS +=
 CXXFLAGS +=
+
+SOURCES += rnbo-export/rnbo_source.cpp
+SOURCES += rnbo-export/rnbo/RNBO.cpp
 
 # Careful about linking to shared libraries, since you can't assume much about the user's environment and library search path.
 # Static libraries are fine, but they should be added to this plugin's build system.
 LDFLAGS +=
 
 # Add .cpp files to the build
+FLAGS += -Isrc 
 SOURCES += $(wildcard src/*.cpp)
 
 # Add files to the ZIP package when running `make dist`

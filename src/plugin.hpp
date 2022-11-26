@@ -1,5 +1,8 @@
 #pragma once
 #include <rack.hpp>
+#include "RNBO.h" 
+#include "widgets.hpp"
+#include "utils.hpp"
 
 
 using namespace rack;
@@ -14,3 +17,4 @@ extern Model* modelBuffMix;
 extern Model* modelLogician;
 extern Model* modelTrackAndField;
 extern Model* modelColoratura;
+extern Model* modelRnboModule;
