@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "macos-clang-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Users/blushaudiodev/Programming/VCVPlugins/Rack/",
+                "/Users/blushaudiodev/Programming/VCVPlugins/Rack-SDK/**",
+                "/Users/blushaudiodev/Programming/VCVPlugins/Rack-SDK/include",
+                "/Users/blushaudiodev/Programming/VCVPlugins/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [],
+            "compilerPath": "/usr/bin/clang++",
+            "intelliSenseMode": "macos-clang-x64",
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "cppStandard": "c++20",
+            "cStandard": "c17"
+        }
+    ],
+    "version": 4
+}
